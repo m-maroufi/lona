@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "pinar";
+  src: url("./Variables/woff2/Pinar-FD-VF[wght-KSHD-DSTY].woff2")
+      format("woff2"),
+    url("./Variables/ttf/Pinar-FD-VF[wght-KSHD-DSTY].ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
