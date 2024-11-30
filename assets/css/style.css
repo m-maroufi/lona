@@ -15,17 +15,7 @@
   --icon-clr: #878687;
   --line-clr: #f3dcc2;
 
-  --sans-font-Black: "IRANSansXFaNum Black D4", sans-serif;
-  --sans-font-DemBold: "IRANSansXFaNum DemiBold D4", sans-serif;
-  --sans-font-bold: "IRANSansXFaNum Bold D4", sans-serif;
-  --sans-font-ExtraBold: "IRANSansXFaNum ExtraBold D4", sans-serif;
-  --sans-font-ExtraBlack: "IRANSansXFaNum ExtraBlack D4", sans-serif;
-  --sans-font-Heavy: "RANSansXFaNum Heavy D4", sans-serif;
-
-  --sans-font-Regular: "IRANSansXFaNum Regular D4", sans-serif;
-  --sans-font-Medium: "IRANSansXFaNum Medium D4", sans-serif;
-  --sans-font-Light: "IRANSansXFaNum Light D4", sans-serif;
-  --sans-font-Thin: "IRANSansXFaNum Thin D4", sans-serif;
+  --iranSansX-font: "IRANSansX", sans-serif;
 }
 * {
   margin: 0;
@@ -208,7 +198,7 @@ i {
   padding: 0 1rem;
 }
 .nav-list .nav-link {
-  font-family: var(--sans-font-Regular) !important;
+  font-family: var(--iranSansX-font);
   font-size: 1.6rem;
   /* font-weight: 500; */
   display: flex;
@@ -226,7 +216,7 @@ i {
   margin: 0 1rem;
 }
 .nav-link.tel-us {
-  font-family: var(--sans-font-Medium);
+  font-family: var(--iranSansX-font);
   display: flex;
   align-items: center;
   margin-right: auto;
@@ -499,7 +489,8 @@ i {
   padding: 1.5rem;
   text-align: left;
   position: relative;
-  font-family: var(--sans-font-Medium);
+  font-family: var(--iranSansX-font);
+  font-weight: 400;
 }
 .box .body .product-name {
   display: inline-block;
@@ -512,11 +503,12 @@ i {
   text-overflow: ellipsis;
   white-space: nowrap;
   line-clamp: 1;
-  font-family: var(--sans-font-Regular);
+  font-family: var(--iranSansX-font);
+  font-weight: 400;
 }
 .box:hover .product-name {
   /* color: var(--primary-clr); */
-  font-weight: 400;
+  font-weight: 500;
 }
 .box .body .price {
   font-weight: 500;
@@ -581,7 +573,8 @@ i {
   line-height: 1.7;
   position: relative;
   height: 100%;
-  font-family: var(--sans-font-Medium);
+  font-family: var(--iranSansX-font);
+  font-weight: 400;
 }
 .cm-slide .rate {
   position: absolute;
@@ -651,7 +644,8 @@ i {
   justify-content: center;
   gap: 2rem;
   text-align: justify;
-  font-family: var(--sans-font-Medium);
+  font-family: var(--iranSansX-font);
+  font-weight: 500;
 }
 .services .wrapper > div img {
   max-height: 71px;
@@ -661,7 +655,8 @@ i {
   min-height: 400px;
   background: var(--primary-clr);
   color: var(--white-clr);
-  font-family: var(--sans-font-Medium);
+  font-family: var(--iranSansX-font);
+  font-weight: 500;
 }
 .footer-logo {
   height: 150px;
@@ -697,7 +692,7 @@ i {
   gap: 1rem;
 }
 .list-links .footer-link {
-  font-family: var(--sans-font-Regular);
+  font-family: var(--iranSansX-font);
   font-size: 1.7rem;
   display: flex;
   align-items: center;
@@ -726,7 +721,8 @@ i {
 }
 .links-item h2 {
   font-size: 1.7rem;
-  font-family: var(--sans-font-ExtraBold);
+  font-family: var(--iranSansX-font);
+  font-weight: 800;
   color: var(--white-clr);
   margin-bottom: 2rem;
 }
@@ -746,26 +742,26 @@ i {
   border-radius: 1rem;
   background: var(--primary-clr);
   overflow: hidden;
-
 }
-.subscrib-form input{
+.subscrib-form input {
   height: 100%;
   width: 100%;
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
   font-size: 1.6rem;
-  font-family: var(--sans-font-Medium);
+  font-family: var(--iranSansX-font);
+  font-weight: 400;
   background: transparent;
   color: var(--white-clr);
-  
 }
-.subscrib-form input::placeholder{
-  font-family: var(--sans-font-Light);
+.subscrib-form input::placeholder {
+  font-family: var(--iranSansX-font);
+  font-weight: 300;
   font-size: 1.5rem;
   color: var(--footer-link-clr);
 }
-.subscrib-form button{
+.subscrib-form button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -776,7 +772,7 @@ i {
   color: var(--line-clr);
   cursor: pointer;
 }
-.copy-right{
+.copy-right {
   font-size: 1.5rem;
   background: var(--white-clr);
   color: var(--dark-clr);

@@ -12,10 +12,7 @@
     />
     <!-- font -->
     <link rel="stylesheet" href="./assets/fonts/pinar/pinar-font-face.css" />
-    <link
-      rel="stylesheet"
-      href="./assets/fonts/IranSansX/IranSansX-font-face.css"
-    />
+    <link rel="stylesheet" href="./assets/fonts/IranSansX/fontiran.css" />
     <!-- font -->
     <!-- icon -->
     <link rel="stylesheet" href="./assets/icons/css/all.min.css" />
@@ -41,7 +38,7 @@
               </svg>
             </button>
           </form>
-          <div class="header-logo">LONA</div>
+          <a href="." class="header-logo">LONA</a>
           <div class="top-links">
             <a href="#" class="cart-icon">
               <span>0</span>
@@ -129,18 +126,38 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    <div class="overlay">
+                      milaura <br />
+                      boots
+                    </div>
                   </div>
                   <div class="swiper-slide">
                     <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    <div class="overlay">
+                      milaura <br />
+                      boots
+                    </div>
                   </div>
                   <div class="swiper-slide">
                     <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    <div class="overlay">
+                      milaura <br />
+                      boots
+                    </div>
                   </div>
                   <div class="swiper-slide">
                     <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    <div class="overlay">
+                      milaura <br />
+                      boots
+                    </div>
                   </div>
                   <div class="swiper-slide">
                     <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    <div class="overlay">
+                      milaura <br />
+                      boots
+                    </div>
                   </div>
                 </div>
               </div>
@@ -332,7 +349,7 @@
               <div class="btns-action">
                 <button class="btn-add-to-cart">افزودن به سبد خرید</button>
                 <div class="btns-cart">
-                  <button class="btn-cart">
+                  <button class="btn-cart" id="addToCart">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -342,8 +359,8 @@
                       <use href="./assets/icons/icons-pack.svg#mdi--add-bold" />
                     </svg>
                   </button>
-                  <input type="text" value="1" />
-                  <button class="btn-cart">
+                  <input type="text" value="1" id="count" />
+                  <button class="btn-cart" id="muinsToCart">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -360,7 +377,10 @@
 
               <div class="description">
                 <h5>توضیحات</h5>
-                <p>تعویض کالا حداکثر تا 48 ساعت همراه با بسته بندی و شرایط اولیه و استفاده نشده و فاکتور امکان پذیر است. </p>
+                <p>
+                  تعویض کالا حداکثر تا 48 ساعت همراه با بسته بندی و شرایط اولیه
+                  و استفاده نشده و فاکتور امکان پذیر است.
+                </p>
                 <p>هزینه ارسال جهت تعویض بر عهده مشتری می باشد.</p>
               </div>
             </div>
@@ -563,6 +583,27 @@
         thumbs: {
           swiper: bigImg,
         },
+      });
+
+      const muinsToCart = document.querySelector("#muinsToCart");
+      const addToCart = document.querySelector("#addToCart");
+      const count = document.querySelector("#count");
+      const quantity = document.querySelector("#quantity");
+      addToCart.addEventListener("click", (e) => {
+        e.preventDefault();
+        const countValue = parseInt(count.value) + 1;
+        count.value = countValue;
+        console.log(count, countValue);
+      });
+      muinsToCart.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (count.value > 1) {
+          const countValue = parseInt(count.value) - 1;
+          count.value = countValue;
+          console.log(count, countValue);
+          return true;
+        }
+        return false;
       });
     </script>
     <script type="module" src="./assets/js/script.js"></script>
