@@ -97,4 +97,23 @@
 <symbol id="heroicons-solid--arrow-left" viewBox="0 0 20 20">
 	<path fill="currentColor" fill-rule="evenodd" d="M9.707 16.707a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 1.414L5.414 9H17a1 1 0 1 1 0 2H5.414l4.293 4.293a1 1 0 0 1 0 1.414" clip-rule="evenodd" />
 </symbol>
+
+<symbol id="plus">
+     <path
+                        d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
+                        stroke="black"
+                        stroke-width="1.91127"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+</symbol>
+<symbol id="bookmark">
+   <path
+                        d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
+                        stroke="#1E1E1E"
+                        stroke-width="0.955636"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+</symbol>
 </svg>

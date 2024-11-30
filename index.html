@@ -121,7 +121,9 @@
             <span class="icon">
               <!--  -->
               <svg height="24" width="24">
-                <use href="./assets/icons/icons-pack.svg#heroicons-solid--arrow-left"></use>
+                <use
+                  href="./assets/icons/icons-pack.svg#heroicons-solid--arrow-left"
+                ></use>
               </svg>
             </span>
           </a>
@@ -220,534 +222,44 @@
               <span>محصولات</span>
             </h2>
           </div>
-          <div class="products-wrapper">
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/1.jpg" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
+          <div class="products-wrapper" id="products__wrapper">
+            <!-- template for product box -->
+            <template id="box__template">
+              <div class="box">
+                <div class="img">
+                  <img src="./assets/images/products/1.jpg" alt="" />
+                  <a href="detail.html" class="box__link">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use href="./assets/icons/icons-pack.svg#plus" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="body">
+                  <a href="detail.html" class="product-name"></a>
+                  <p class="price">
+                    <span></span>
+                    تومان
+                  </p>
+                  <button class="bookmark">
+                    <svg
+                      width="21"
+                      height="26"
+                      viewBox="0 0 21 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use href="./assets/icons/icons-pack.svg#bookmark" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/2.png" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/3.jpg" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/5.jpg" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/5.jpg" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products//6.png" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/7.jpg" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/8.png" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/9.jpg" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/10.jpg" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/11.jpg" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="img">
-                <img src="./assets/images/products/12.jpg" alt="" />
-                <a href="#">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.0552 6.35742V23.0811M6.69336 14.7192H23.417"
-                      stroke="black"
-                      stroke-width="1.91127"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="body">
-                <a href="#" class="product-name"> کفش مدل SWMS </a>
-                <p class="price">250,000 تومان</p>
-                <button class="bookmark">
-                  <svg
-                    width="21"
-                    height="26"
-                    viewBox="0 0 21 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.0622 22.6112L10.4876 17.4349L4.91309 22.6112V6.04686C4.91309 5.49772 5.08089 4.97107 5.37958 4.58277C5.67828 4.19446 6.0834 3.97632 6.50581 3.97632H14.4694C14.8919 3.97632 15.297 4.19446 15.5957 4.58277C15.8944 4.97107 16.0622 5.49772 16.0622 6.04686V22.6112Z"
-                      stroke="#1E1E1E"
-                      stroke-width="0.955636"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            </template>
           </div>
         </div>
       </section>
@@ -1192,6 +704,6 @@
     <!-- scripts -->
     <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/swiper.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/script.js"></script>
   </body>
 </html>
