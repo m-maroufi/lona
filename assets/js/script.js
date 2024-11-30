@@ -1,10 +1,11 @@
 import data from "./data.js";
 import { formatePrice } from "./helper.js";
-
+// 
 const productsWrapper = document.querySelector("#products__wrapper");
 const boxTemplate = document.querySelector("#box__template").content;
 const baseUrl = window.location.protocol + "//" + window.location.host;
 
+// ایجاد محصولات در صفحه اصلی
 data.forEach((item) => {
   const box = boxTemplate.cloneNode(true);
   box.querySelector(".img > img").src = `./assets/${item.cover}`;
@@ -15,7 +16,7 @@ data.forEach((item) => {
   // box.querySelector(".box__price").textContent = item.price;
   productsWrapper.appendChild(box);
 });
-
+// ایجاد ایونت کلیک در صفحه اصلی برای اسکرول خودکار به بخش مورد نظر
 document.querySelectorAll(".nav-link").forEach((item) => {
   item.addEventListener("click", function (event) {
     // جلوگیری از رفتار پیش‌فرض لینک

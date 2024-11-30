@@ -4,7 +4,7 @@
   --primary-clr: rgba(88, 27, 45, 1);
   --primary-clr-75: rgba(88, 27, 45, 0.75);
   --primary-clr-50: rgba(88, 27, 45, 0.5);
-  --primary-clr-25: rgba(88, 27, 45, 0.25);
+  --primary-clr-25: rgba(88, 27, 45, 0.15);
   --white-clr: rgba(255, 255, 255, 1);
   --white-light: #fafafa;
   --gray-clr: rgba(92, 91, 91, 1);
@@ -95,7 +95,7 @@ i {
   left: 0;
   background: var(--white-clr);
   /* background: var(--white-light); */
-  z-index: 10;
+  z-index: 999;
 }
 .header .top {
   display: flex;
