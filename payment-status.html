@@ -22,8 +22,7 @@
     <!-- swiper -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/cart.css" />
-    <link rel="stylesheet" href="./assets/css/order-detail.css" />
-    <link rel="stylesheet" href="./assets/css/payment.css" />
+    <link rel="stylesheet" href="./assets/css/status-payment.css" />
     <title>فروشگاه | لونا</title>
   </head>
   <body>
@@ -109,218 +108,48 @@
     <!-- main -->
     <main class="main">
       <div class="container">
-        <div class="progressbar">
-          <div class="bar" style="width: 100%"></div>
-          <div class="progress-item active">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="icon"
+        <div class="status-wrapper">
+          <div class="status success">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1024 1024"
+                class="status-icon"
+              >
+                <use
+                  href="./assets/icons/icons-pack.svg#simple-line-icons--check"
+                />
+              </svg>
+            </div>
+            <p>پرداخت شما با موفقیت انجام شد!</p>
+            <h5>
+              <span> کد رهگیری :</span>
+              <span>123456789</span>
+            </h5>
+            <a href="index.html" class="back">بازگــشت به خـــانه</a>
+          </div>
+          <div class="status fail">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1024 1024"
+                class="status-icon"
+              >
+                <use
+                  href="./assets/icons/icons-pack.svg#codicon--error"
+                />
+              </svg>
+            </div>
+            <p>پرداخت شما ناموفق بود!</p>
+            <span
+              >سفارش شما ثبت نشده و پرداخت شما به درستی انجام نشده است.</span
             >
-              <use href="./assets/icons/icons-pack.svg#solar--bag-4-linear" />
-            </svg>
-            <span> سبد خرید </span>
+            <h5>
+              <span> کد رهگیری :</span>
+              <span>123456789</span>
+            </h5>
+            <a href="index.html" class="back">بازگــشت به خـــانه</a>
           </div>
-          <div class="progress-item active">
-            <svg
-              class="icon"
-              viewBox="0 0 17 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use href="./assets/icons/icons-pack.svg#pen--add" />
-            </svg>
-            <span> تکمیل اطلاعات </span>
-          </div>
-          <div class="progress-item active">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="icon"
-            >
-              <use
-                href="./assets/icons/icons-pack.svg#hugeicons--credit-card-pos"
-              />
-            </svg>
-            <span> پرداخت </span>
-          </div>
-        </div>
-        <div class="cart-wrapper">
-          <div class="step-pages order-detail">
-            <div class="step-page active">
-              <div class="send-method">
-                <h2>روش پرداخت</h2>
-                <label for="method-1" class="active">
-                  <input
-                    type="radio"
-                    id="method-1"
-                    name="send-method"
-                    checked
-                  />
-                  <div>
-                    <h5>پرداخت اینترنتی</h5>
-                    <p>پرداخت با کلیه کارت های عضو شتاب</p>
-                  </div>
-                </label>
-              </div>
-
-              <div class="address-list-wrapper">
-                <div>
-                  <h2>درگاه پرداخت</h2>
-                </div>
-                <div class="list-wrapper">
-                  <div class="bank-list">
-                    <div>
-                      <input type="radio" id="iyand" name="bank" checked />
-                      <label for="iyand">
-                        <img
-                          src="./assets/images/banks/Pasted image (2).png"
-                          alt=""
-                        />
-                      </label>
-                    </div>
-                    <div>
-                      <input type="radio" id="mellat" name="bank" />
-                      <label for="mellat">
-                        <img
-                          src="./assets/images/banks/bank-mellat.png"
-                          alt=""
-                        />
-                      </label>
-                    </div>
-                    <div>
-                      <input type="radio" id="tourism" name="bank" />
-                      <label for="tourism">
-                        <img
-                          src="./assets/images/banks/Gardeshgari bank logo Vector.png"
-                          alt=""
-                        />
-                      </label>
-                    </div>
-                    <div>
-                      <input type="radio" id="saman" name="bank" />
-                      <label for="saman">
-                        <img
-                          src="./assets/images/banks/Saman bank logo Vector.png"
-                          alt=""
-                        />
-                      </label>
-                    </div>
-                  </div>
-                  <p>پرداخت از طریق کلیه کارتهای عضو شتاب امکان پذیر است.</p>
-                </div>
-
-                <!-- <ul class="address-list">
-                  <li></li>
-                </ul> -->
-              </div>
-            </div>
-          </div>
-          <!-- aside -->
-          <aside class="check-out">
-            <div class="aside-header">
-              <h2>سبد خرید</h2>
-              <button class="delete-all-btn">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use href="./assets/icons/icons-pack.svg#trash" />
-                </svg>
-              </button>
-            </div>
-            <div class="list-order-item">
-              <div>
-                <div>بوت MILAURA</div>
-                <div>
-                  <span>2</span>
-                  <span>عدد</span>
-                </div>
-                <div>
-                  <span>1,000,000</span>
-                  <span>تومان</span>
-                </div>
-              </div>
-
-              <div>
-                <div>بوت MILAURA</div>
-                <div>
-                  <span>2</span>
-                  <span>عدد</span>
-                </div>
-                <div>
-                  <span>1,000,000</span>
-                  <span>تومان</span>
-                </div>
-              </div>
-
-              <div>
-                <div>بوت MILAURA</div>
-                <div>
-                  <span>2</span>
-                  <span>عدد</span>
-                </div>
-                <div>
-                  <span>1,000,000</span>
-                  <span>تومان</span>
-                </div>
-              </div>
-            </div>
-            <div class="pay-details">
-              <h3>جزئیات پرداخت</h3>
-
-              <div>
-                <span>تعداد</span>
-                <span>4</span>
-              </div>
-
-              <div>
-                <span>قیمت کالاها</span>
-                <div>
-                  <span>23,000,000</span>
-                  <span>تومان</span>
-                </div>
-              </div>
-
-              <div>
-                <span> هزینه ارسال</span>
-                <div>
-                  <span>0</span>
-                  <span>تومان</span>
-                </div>
-              </div>
-              <div class="alert-pay">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 21 21"
-                  width="24"
-                  height="24"
-                >
-                  <use
-                    href="./assets/icons/icons-pack.svg#system-uicons--warning-hex"
-                  />
-                </svg>
-                هزینه ارسال در ادامه بر اساس آدرس، زمان و نحوه ارسال انتخابی شما
-                محاسبه و به این مبلغ اضافه خواهد شد.
-              </div>
-
-              <div>
-                <span> مبلغ قابل پرداخت</span>
-                <div>
-                  <span>20,308,000</span>
-                  <span>تومان</span>
-                </div>
-              </div>
-            </div>
-            <div class="pay-des">
-              کالاهای موجود در سبد شما رزرو و ثبت نشده اند. برای ثبت سفارش مراحل
-              بعدی را تکمیل کنید.
-            </div>
-            <div class="payment-btn">
-              <a href="payment-status.html">پرداخت</a>
-            </div>
-          </aside>
         </div>
       </div>
     </main>

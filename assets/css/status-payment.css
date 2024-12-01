@@ -1,0 +1,87 @@
+.status-wrapper {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  min-height: calc(50vh - 20rem);
+  margin-top: 15rem;
+  font-family: var(--iranSansX-font);
+  text-align: center;
+}
+.status-wrapper .success {
+  min-height: 10rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+.status.success > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-clr);
+  background-color: var(--green-clr);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.status-icon {
+  color: var(--white-clr);
+  width: 50px;
+  height: 50px;
+}
+
+.status-wrapper h5 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.status-wrapper p {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.status-wrapper h5 span:last-child {
+  letter-spacing: 2px;
+}
+.status-wrapper a.back {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background: var(--primary-clr);
+  color: var(--white-clr);
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+.status-wrapper a.back:is(:hover,:active) {
+  scale: .95;
+}
+
+.status > span {
+  display: block;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+.status.fail > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-clr);
+  background-color: var(--red-clr);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+.status.fail {
+  display: none;
+}
