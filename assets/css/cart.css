@@ -194,6 +194,10 @@
   min-height: 5rem;
   border-bottom: 1px solid var(--light-gray);
 }
+.aside-header h2{
+  font-size: 1.8rem;
+  font-family: inherit;
+}
 .delete-all-btn {
   display: flex;
   align-items: center;

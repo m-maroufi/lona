@@ -1,0 +1,55 @@
+.address-list-wrapper{
+    margin-top: 5rem;
+}
+
+.list-wrapper {
+  padding: 4rem 2rem;
+  margin-top: 1rem;
+  min-height: 20rem;
+  border-radius: 1.6rem;
+  border: 1px solid var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.bank-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.bank-list img {
+  width: 60px;
+  height: 60px;
+  filter: saturate(0);
+  opacity: 50%;
+}
+.bank-list label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 200ms;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: 4px solid transparent;
+}
+.bank-list input {
+  display: none;
+}
+.bank-list input:checked + label {
+  border: 1px solid var(--primary-clr);
+
+  outline: 4px solid var(--primary-clr-25);
+}
+.bank-list input:checked + label img {
+  opacity: 1;
+  filter: saturate(100%);
+  scale: 1.2;
+}
+.list-wrapper p {
+  font-weight: 400;
+  color: var(--gray-clr);
+  font-size: 13px;
+}
