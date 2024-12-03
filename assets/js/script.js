@@ -8,6 +8,8 @@ const baseUrl = window.location.protocol + "//" + window.location.host;
 // ایجاد محصولات در صفحه اصلی
 data.forEach((item) => {
   const box = boxTemplate.cloneNode(true);
+  console.log(box);
+  
   box.querySelector(".img > img").src = `./assets/${item.cover}`;
   box.querySelector(".box__link").href += `?id=${item.id}`;
   box.querySelector(".body > a").href += `?id=${item.id}`;

@@ -121,42 +121,18 @@
           <div class="img-gallery">
             <div class="wrapper Skeleton">
               <div class="big-slider swiper" id="detail__gallery">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                    <div class="overlay">
-                      milaura <br />
-                      boots
+                <div class="swiper-wrapper" id="big__Slider__wrapper">
+                  <template id="side__big__slider">
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-1.jpg"
+                      />
+                      <div class="overlay">
+                        milaura <br />
+                        boots
+                      </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                    <div class="overlay">
-                      milaura <br />
-                      boots
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                    <div class="overlay">
-                      milaura <br />
-                      boots
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                    <div class="overlay">
-                      milaura <br />
-                      boots
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                    <div class="overlay">
-                      milaura <br />
-                      boots
-                    </div>
-                  </div>
+                  </template>
                 </div>
               </div>
               <button class="swiper-btn-next">
@@ -202,23 +178,7 @@
               class="tumb-slider swiper Skeleton"
               id="tumb_swiper"
             >
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                </div>
-              </div>
+              <div class="swiper-wrapper" id="tumb__slide__wrapper"></div>
             </div>
           </div>
           <div class="product-detail">
@@ -292,62 +252,27 @@
               </div>
 
               <div class="inputs-radio color Skeleton">
-                <div>
-                  <input type="radio" name="color" id="color-1" checked />
-                  <label
-                    for="color-1"
-                    class="radio-label"
-                    style="--clr: #4f1d25"
-                  >
-                  </label>
-                </div>
-                <div>
-                  <input type="radio" name="color" id="color-2" />
-                  <label
-                    for="color-2"
-                    class="radio-label"
-                    style="--clr: #1c1d1c"
-                  >
-                  </label>
-                </div>
-                <div>
-                  <input type="radio" name="color" id="color-3" />
-                  <label
-                    for="color-3"
-                    class="radio-label"
-                    style="--clr: #516656"
-                  >
-                  </label>
-                </div>
-                <div>
-                  <input type="radio" name="color" id="color-4" />
-                  <label
-                    for="color-4"
-                    class="radio-label"
-                    style="--clr: #f77c01"
-                  >
-                  </label>
-                </div>
+                <template id="color__product">
+                  <div>
+                    <input type="radio" name="color" id="color-1" />
+                    <label
+                      for="color-1"
+                      class="radio-label"
+                      style="--clr: #4f1d25"
+                    >
+                    </label>
+                  </div>
+                </template>
               </div>
               <div class="sizes Skeleton">
                 <span>سایز بندی </span>
                 <div class="inputs-radio">
-                  <div>
-                    <input type="radio" name="size" id="size-1" checked />
-                    <label for="size-1" class="radio-label-size"> 40 </label>
-                  </div>
-                  <div>
-                    <input type="radio" name="size" id="size-2" />
-                    <label for="size-2" class="radio-label-size"> 34 </label>
-                  </div>
-                  <div>
-                    <input type="radio" name="size" id="size-3" />
-                    <label for="size-3" class="radio-label-size"> 32 </label>
-                  </div>
-                  <div>
-                    <input type="radio" name="size" id="size-4" />
-                    <label for="size-4" class="radio-label-size"> 43 </label>
-                  </div>
+                  <template id="size__product">
+                    <div>
+                      <input type="radio" name="size" id="size-1" />
+                      <label for="size-1" class="radio-label-size"> 40 </label>
+                    </div>
+                  </template>
                 </div>
               </div>
               <div class="btns-action Skeleton">
@@ -389,6 +314,306 @@
               </div>
             </div>
           </div>
+
+          <!-- <template id="product__detail">
+            <div class="img-gallery">
+              <div class="wrapper Skeleton">
+                <div class="big-slider swiper" id="detail__gallery">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-1.jpg"
+                      />
+                      <div class="overlay">
+                        milaura <br />
+                        boots
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-2.jpg"
+                      />
+                      <div class="overlay">
+                        milaura <br />
+                        boots
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-3.jpg"
+                      />
+                      <div class="overlay">
+                        milaura <br />
+                        boots
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-4.jpg"
+                      />
+                      <div class="overlay">
+                        milaura <br />
+                        boots
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-5.jpg"
+                      />
+                      <div class="overlay">
+                        milaura <br />
+                        boots
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="swiper-btn-next">
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      xlink:href="./assets/icons/icons-pack.svg#arrow-right"
+                    />
+                  </svg>
+                </button>
+                <button class="swiper-btn-prev">
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      xlink:href="./assets/icons/icons-pack.svg#arrow-right"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="zooming Skeleton">
+                <button class="zoom">
+                  <svg
+                    width="39"
+                    height="40"
+                    viewBox="0 0 39 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="./assets/icons/icons-pack.svg#zoomPlus" />
+                  </svg>
+                  <span>مشاهده تصویر بزرگتر</span>
+                </button>
+              </div>
+              <div
+                thumbsSlider=""
+                class="tumb-slider swiper Skeleton"
+                id="tumb_swiper"
+              >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-detail">
+              <div class="product-title Skeleton">
+                <h1>بـــــوت برند milaura</h1>
+                <div class="line-title"></div>
+              </div>
+              <div class="main-detail">
+                <div class="pro-name Skeleton">
+                  بوت ساق بلند چرم طبیعی برند milaura
+                </div>
+                <div class="rate-code Skeleton">
+                  <div class="code">
+                    <span>کد </span>
+                    <span>724323</span>
+                  </div>
+                  <div class="rate">
+                    <span>3.5</span>
+                    <div class="stars">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        class=""
+                      >
+                        <use
+                          href="./assets/icons/icons-pack.svg#si--star-fill"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        class=""
+                      >
+                        <use
+                          href="./assets/icons/icons-pack.svg#si--star-fill"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        class="active"
+                      >
+                        <use
+                          href="./assets/icons/icons-pack.svg#si--star-fill"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        class="active"
+                      >
+                        <use
+                          href="./assets/icons/icons-pack.svg#si--star-fill"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        class="active"
+                      >
+                        <use
+                          href="./assets/icons/icons-pack.svg#si--star-fill"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="pricing Skeleton">
+                  <span>64,655,000</span>
+                  <span>تومان</span>
+                </div>
+
+                <div class="inputs-radio color Skeleton">
+                  <div>
+                    <input type="radio" name="color" id="color-1" checked />
+                    <label
+                      for="color-1"
+                      class="radio-label"
+                      style="--clr: #4f1d25"
+                    >
+                    </label>
+                  </div>
+                  <div>
+                    <input type="radio" name="color" id="color-2" />
+                    <label
+                      for="color-2"
+                      class="radio-label"
+                      style="--clr: #1c1d1c"
+                    >
+                    </label>
+                  </div>
+                  <div>
+                    <input type="radio" name="color" id="color-3" />
+                    <label
+                      for="color-3"
+                      class="radio-label"
+                      style="--clr: #516656"
+                    >
+                    </label>
+                  </div>
+                  <div>
+                    <input type="radio" name="color" id="color-4" />
+                    <label
+                      for="color-4"
+                      class="radio-label"
+                      style="--clr: #f77c01"
+                    >
+                    </label>
+                  </div>
+                </div>
+                <div class="sizes Skeleton">
+                  <span>سایز بندی </span>
+                  <div class="inputs-radio">
+                    <div>
+                      <input type="radio" name="size" id="size-1" checked />
+                      <label for="size-1" class="radio-label-size"> 40 </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="size" id="size-2" />
+                      <label for="size-2" class="radio-label-size"> 34 </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="size" id="size-3" />
+                      <label for="size-3" class="radio-label-size"> 32 </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="size" id="size-4" />
+                      <label for="size-4" class="radio-label-size"> 43 </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="btns-action Skeleton">
+                  <button class="btn-add-to-cart">افزودن به سبد خرید</button>
+                  <div class="btns-cart">
+                    <button class="btn-cart" id="addToCart">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <use
+                          href="./assets/icons/icons-pack.svg#mdi--add-bold"
+                        />
+                      </svg>
+                    </button>
+                    <input type="text" value="1" id="count" />
+                    <button class="btn-cart" id="muinsToCart">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <use
+                          href="./assets/icons/icons-pack.svg#material-symbols--remove"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="description Skeleton">
+                  <h5>توضیحات</h5>
+                  <p>
+                    تعویض کالا حداکثر تا 48 ساعت همراه با بسته بندی و شرایط
+                    اولیه و استفاده نشده و فاکتور امکان پذیر است.
+                  </p>
+                  <p>هزینه ارسال جهت تعویض بر عهده مشتری می باشد.</p>
+                </div>
+              </div>
+            </div>
+          </template> -->
         </section>
       </div>
     </main>
@@ -570,54 +795,7 @@
     <!-- scripts -->
     <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/swiper.js"></script>
-    <script>
-      const bigImg = new Swiper("#tumb_swiper", {
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-        //
-      });
-      const tumbImg = new Swiper("#detail__gallery", {
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-btn-next",
-          prevEl: ".swiper-btn-prev",
-        },
-        thumbs: {
-          swiper: bigImg,
-        },
-      });
 
-      const muinsToCart = document.querySelector("#muinsToCart");
-      const addToCart = document.querySelector("#addToCart");
-      const count = document.querySelector("#count");
-      const quantity = document.querySelector("#quantity");
-      addToCart.addEventListener("click", (e) => {
-        e.preventDefault();
-        const countValue = parseInt(count.value) + 1;
-        count.value = countValue;
-        console.log(count, countValue);
-      });
-      muinsToCart.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (count.value > 1) {
-          const countValue = parseInt(count.value) - 1;
-          count.value = countValue;
-          console.log(count, countValue);
-          return true;
-        }
-        return false;
-      });
-    </script>
-    <script>
-      window.addEventListener("load", (e) => {
-        const skeleton = document.querySelectorAll(".Skeleton");
-        skeleton.forEach((skeleton) => {
-          skeleton.classList.remove("Skeleton");
-        });
-      });
-    </script>
     <!-- <script type="module" src="./assets/js/script.js"></script> -->
   </body>
 </html>
