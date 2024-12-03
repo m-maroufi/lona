@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="فروشگاه اینترنتی کیف و کفش لونا" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font -->
+    <link rel="stylesheet" href="./assets/fonts/pinar/pinar-font-face.css" />
+    <link rel="stylesheet" href="./assets/fonts/IranSansX/fontiran.css" />
+    <!-- font -->
+    <!-- swiper -->
+    <link rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/login.css" />
+    <title>فروشگاه | لونا</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <section class="top">
+          <form class="searchbar">
+            <input type="text" class="search-input" placeholder="جستوجو" />
+            <button type="button">
+              <!-- iconoir--search -->
+              <svg height="24" width="24">
+                <use href="./assets/icons/icons-pack.svg#iconoir--search"></use>
+              </svg>
+            </button>
+          </form>
+          <a href="." class="header-logo">LONA</a>
+          <div class="top-links">
+            <a href="cart.html" class="cart-icon">
+              <span>0</span>
+              <svg height="24" width="24" style="color: gray">
+                <use
+                  href="./assets/icons/icons-pack.svg#mi--shopping-cart"
+                ></use>
+              </svg>
+            </a>
+            <div class="horiz-line"></div>
+            <a href="login.html" class="btn user-icon">
+              <svg height="24" width="24">
+                <use
+                  href="./assets/icons/icons-pack.svg#lsicon--user-outline"
+                ></use>
+              </svg>
+              <span>حساب کاربری</span>
+            </a>
+          </div>
+        </section>
+        <section class="bottom">
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active">
+                  <svg height="24" width="24">
+                    <use
+                      href="./assets/icons/icons-pack.svg#lucide--home"
+                    ></use>
+                  </svg>
+                  <span>خانه</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="index.html#categories" class="nav-link">
+                  <svg height="24" width="24">
+                    <use
+                      href="./assets/icons/icons-pack.svg#ic--round-menu"
+                    ></use>
+                  </svg>
+                  <span>دسته بندی محصولات</span>
+                </a>
+              </li>
+            </ul>
+            <div class="horiz-line"></div>
+            <ul class="nav-list secondary-menu">
+              <li class="nav-item">
+                <a href="index.html#about" class="nav-link">
+                  <span>درباره ما</span>
+                </a>
+              </li>
+            </ul>
+            <a href="tel:+98000000000" class="nav-link tel-us">
+              <span>021-1234-567</span>
+              <svg height="24" width="24">
+                <use href="./assets/icons/icons-pack.svg#phone"></use>
+              </svg>
+            </a>
+          </nav>
+        </section>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- main -->
+    <main class="main">
+      <div class="container">
+        <div class="login-wrapper">
+          <div class="form-wrapper">
+            <div class="form-title">
+              <button class="go-back" id="go-back" style="display: none">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="icon"
+                >
+                  <use
+                    href="./assets/icons/icons-pack.svg#line-md--arrow-right"
+                  />
+                </svg>
+              </button>
+              <a href="." class="header-logo">LONA</a>
+              <h1>به <span>لونــــــــا</span> خوش آمدید</h1>
+            </div>
+            <form action="post" class="login-form">
+              <div class="section-one active">
+                <h3>عضویت یا ورود</h3>
+                <p>کد تایید به شماره موبایلی که وارد میکنید ارسال خواهد شد.</p>
+                <div class="form-control" data-role="phone">
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    required
+                    maxlength="11"
+                  />
+                  <label for="phone" class="floating-label"
+                    >شماره موبایل
+                  </label>
+                  <label for="phone" dir="ltr">+98</label>
+                </div>
+                <div class="info" data-err="phone"></div>
+                <div class="check-field" data-role="accepted">
+                  <input type="checkbox" name="accepted" id="accepted" />
+                  <label for="accepted">
+                    با ورود و ثبت‌نام در سایت، با
+                    <a href="#"> قوانین رگال</a> موافقت می‌کنم.
+                  </label>
+                </div>
+                <div class="info" data-err="accepted"></div>
+
+                <div class="btn-wrapper">
+                  <button type="button" class="btn" data-role="send-code">
+                    <span>تایید و ادامه</span>
+                    <span class="loader" style="display: none"></span>
+                  </button>
+                </div>
+                <div class="info" data-err="rootErr"></div>
+
+                <div class="line-or">
+                  <span>یا</span>
+                </div>
+                <button type="button" class="google-login-btn">
+                  <img
+                    src="./assets/images/google Logo.png"
+                    alt="google logo"
+                  />
+                  <span>ورود با گوگل</span>
+                </button>
+              </div>
+              <div class="section-two">
+                <h3>تائید شماره تلفن</h3>
+                <div class="description">
+                  <p>
+                    کد ارسال شده به شماره تلفن <span>09234566555</span>
+                    را وارد کنید
+                  </p>
+                  <button type="button">ویرایش شماره موبایل</button>
+                </div>
+                <div class="otp-wrapper" dir="ltr">
+                  <input type="text" name="otp" id="1" class="otp-input" />
+                  <input
+                    type="text"
+                    name="otp"
+                    id="2"
+                    class="otp-input"
+                    disabled
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="otp"
+                    id="3"
+                    class="otp-input"
+                    disabled
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="otp"
+                    id="4"
+                    class="otp-input"
+                    disabled
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="otp"
+                    id="5"
+                    class="otp-input"
+                    disabled
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="otp"
+                    id="6"
+                    class="otp-input"
+                    disabled
+                    required
+                  />
+                </div>
+                <button class="timing">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 30 30"
+                    class="icon"
+                  >
+                    <use href="./assets/icons/icons-pack.svg#wi--time-4" />
+                  </svg>
+                  <span class="time">01:58</span>
+                  <span>دریافت کد مجدد</span>
+                </button>
+                <div class="btn-wrapper">
+                  <button
+                    type="button"
+                    class="btn"
+                    data-role="send-code"
+                    id="otpVrify"
+                    disabled
+                  >
+                    <span>ورود</span>
+                    <span class="loader" style="display: none"></span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="img">
+            <img src="./assets/images/login.png" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end main -->
+    <!-- scripts -->
+    <script>
+      let formData = {
+        phone: "",
+        accepted: false,
+      };
+      let errorphone = {
+        isError: false,
+        message: "",
+      };
+      let errAccepted = {
+        isError: false,
+        message: "",
+      };
+      let rootErr = {
+        isError: false,
+        message: "",
+      };
+      function validateMobileNumber(phoneNumber) {
+        // الگوی شماره تلفن همراه ایران
+        const pattern = /^09\d{9}$/;
+
+        return pattern.test(phoneNumber);
+      }
+
+      const form = document.querySelector("form.login-form");
+      const sectionOne = document.querySelector(".section-one");
+      const sectionTwo = document.querySelector(".section-two");
+      const backForm = document.querySelector(".go-back");
+
+      const inpPhone = document.querySelector("#phone");
+      const inpAccepted = document.querySelector("#accepted");
+      const formCrtlElIpu = document.querySelector('[data-role="phone"]');
+      const formCrtlElCheckbox = document.querySelector(
+        '[data-role="accepted"]'
+      );
+      const errElAccepted = document.querySelector('[data-err="accepted"]');
+      const errElPhone = document.querySelector('[data-err="phone"]');
+      const btnSendCode = document.querySelector('[data-role="send-code"]');
+      const rootErrEl = document.querySelector('[data-err="rootErr"]');
+      const optInputs = document.querySelectorAll(".otp-input");
+      const otpVrify = document.querySelector("#otpVrify");
+      inpPhone.addEventListener("input", (e) => {
+        if (validateMobileNumber(inpPhone.value)) {
+          error = {
+            isError: false,
+            message: "",
+          };
+          formCrtlElIpu.classList.remove("invalid");
+          errElPhone.classList.remove("err");
+          errElPhone.textContent = error.message;
+          btnSendCode.disabled = false;
+          formData.phone = inpPhone.value;
+          return;
+        } else {
+          error = {
+            isError: true,
+            message: "شماره تلفن با 09 شروع شود و بیش از 11 رقم نباشد",
+          };
+          errElPhone.textContent = error.message;
+        }
+      });
+
+      inpPhone.addEventListener("change", (e) => {
+        if (inpPhone.value.trim() === "" || error.isError) {
+          formCrtlElIpu.classList.add("invalid");
+          errElPhone.classList.add("err");
+          btnSendCode.disabled = true;
+        } else {
+          formData.phone = inpPhone.value;
+        }
+      });
+
+      inpAccepted.addEventListener("change", (e) => {
+        if (!e.target.checked) {
+          errAccepted = {
+            isError: true,
+            message: "لطفا با شرایط ما موافقت کنید",
+          };
+        } else {
+          errAccepted = {
+            isError: false,
+            message: "",
+          };
+          formData.accepted = e.target.checked;
+        }
+        errElAccepted.classList.add("err");
+        errElAccepted.textContent = errAccepted.message;
+        btnSendCode.disabled = errAccepted.isError;
+      });
+
+      btnSendCode.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (
+          formData.phone.trim() == "" ||
+          formData.accepted == false ||
+          errorphone.isError ||
+          errAccepted.isError ||
+          !validateMobileNumber(formData.phone)
+        ) {
+          rootErr = {
+            isError: true,
+            message:
+              "لطفا با شرایط ما موافقت کنید و شماره تلفن خود را وارد کنید.",
+          };
+          rootErrEl.classList.add("err");
+          rootErrEl.textContent = rootErr.message;
+          btnSendCode.disabled = rootErr.isError;
+        } else {
+          rootErr = {
+            isError: false,
+            message: "",
+          };
+          rootErrEl.classList.remove("err");
+          rootErrEl.textContent = rootErr.message;
+          btnSendCode.disabled = rootErr.isError;
+          sectionOne.classList.remove("active");
+          sectionTwo.classList.add("active");
+          backForm.style.display = "block";
+          optInputs[0].disabled = false;
+          optInputs[0].focus();
+        }
+      });
+
+      backForm.addEventListener("click", (e) => {
+        console.log(e);
+        sectionOne.classList.add("active");
+        sectionTwo.classList.remove("active");
+        backForm.style.display = "none";
+        optInputs.forEach((input) => {
+          input.value = "";
+          input.disabled = true;
+        });
+      });
+
+      // otp inpus validetion
+
+      // event lisner for each input
+      optInputs.forEach((input, index) => {
+        input.addEventListener("keyup", (e) => {
+          const currentInp = input;
+          const nexInp = currentInp.nextElementSibling;
+          const prevInp = currentInp.previousElementSibling;
+          if (currentInp.value.length > 1) {
+            currentInp.value = "";
+            return;
+          }
+
+          if (
+            nexInp &&
+            nexInp.hasAttribute("disabled") &&
+            currentInp.value.length !== ""
+          ) {
+            nexInp.removeAttribute("disabled");
+            nexInp.focus();
+          }
+
+          if (e.key === "Backspace") {
+            optInputs.forEach((input, i) => {
+              if (index <= i && prevInp) {
+                input.setAttribute("disabled", true);
+                currentInp.value = "";
+                prevInp.focus();
+              }
+            });
+          }
+
+          // checking input value
+          if (!optInputs[5].disabled && optInputs[5].value !== "") {
+            otpVrify.disabled = false;
+
+            optInputs.forEach((inp) => inp.classList.add("active"));
+            // send data for server and redirect
+            otpVrify.addEventListener("click", () => {
+              let otp = "";
+              optInputs.forEach((input) => {
+                otp += input.value;
+              });
+              console.log(otp);
+            });
+            return;
+          }
+          otpVrify.disabled = true;
+        });
+      });
+    </script>
+    <!-- <script type="module" src="./assets/js/script.js"></script> -->
+  </body>
+</html>

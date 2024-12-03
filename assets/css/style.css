@@ -2,6 +2,7 @@
   --pinar-font: "pinar", sans-serif;
   --logo-font: "Syne", sans-serif;
   --primary-clr: rgba(88, 27, 45, 1);
+  --primary-clr-90: rgba(88, 27, 45, 0.9);
   --primary-clr-75: rgba(88, 27, 45, 0.75);
   --primary-clr-50: rgba(88, 27, 45, 0.5);
   --primary-clr-25: rgba(88, 27, 45, 0.15);
@@ -14,8 +15,9 @@
   --footer-link-clr: #cbcbcb;
   --icon-clr: #878687;
   --line-clr: #f3dcc2;
-  --red-clr:#ff4545;
-  --green-clr:#34C759;
+  --red-clr: #ff4545;
+  --green-clr: #34c759;
+  --blue-clr: #007aff;
   --iranSansX-font: "IRANSansX", sans-serif;
 }
 * {
@@ -66,7 +68,7 @@ i {
 }
 .btn:hover {
   /* box-shadow: 0px 5px rgba(29, 31, 32, 0); */
-  scale: 0.98;
+  /* scale: 0.98; */
 }
 .section-title .title {
   font-size: 2.5rem;
@@ -79,6 +81,7 @@ i {
 
 main {
   min-height: calc(100vh - 14rem);
+  margin-top: 14rem;
 }
 /* ===================== end base style ========================= */
 
@@ -89,8 +92,8 @@ main {
   top: 0;
   left: 0;
   background: var(--white-clr);
-  /* background: var(--white-light); */
-  z-index: 999;
+  z-index: 10000;
+  max-height: 14rem;
 }
 .header .top {
   display: flex;
@@ -789,6 +792,37 @@ main {
   text-align: center;
 }
 /* responsive breakpoints */
+
+.Skeleton {
+  position: relative;
+  z-index: 200;
+}
+.Skeleton * {
+  box-shadow: none !important;
+  outline: none !important;
+  overflow: hidden !important;
+  user-select: none;
+  pointer-events: none;
+  /* display: none; */
+}
+.Skeleton::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(90deg, #eee, #cbcbcb, #eee);
+  background-size: 200%;
+  animation: skeleton-animation 1s infinite linear;
+}
+@keyframes skeleton-animation {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
 
 /* // Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {

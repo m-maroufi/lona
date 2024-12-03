@@ -1,0 +1,401 @@
+.main {
+  height: calc(100vh -14rem);
+}
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 14rem);
+}
+.login-wrapper .img {
+  width: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.login-wrapper .img img {
+  height: 100%;
+  max-width: 100%;
+  object-position: bottom;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.form-wrapper {
+  align-self: flex-start;
+  width: 50%;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+}
+.form-title a {
+  margin: 0 auto;
+}
+.form-title h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+.form-title h1 span {
+  color: var(--primary-clr);
+}
+
+.go-back {
+  right: 2rem;
+  top: 2rem;
+  position: absolute;
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--gray-clr);
+  cursor: pointer;
+  transition: all 100ms linear;
+}
+
+.form-title .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #85858B;
+  transition: all 150ms linear;
+}
+.go-back:hover .icon{
+  color: var(--primary-clr);
+  transform: translateX(1rem);
+}
+.login-form {
+  min-height: 10rem;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem;
+  font-family: var(--iranSansX-font);
+}
+
+.login-form > div {
+  display: flex;
+  flex-direction: column;
+}
+.login-form > div h3 {
+  margin-bottom: 1rem;
+}
+.login-form > div p {
+  font-weight: 300;
+}
+.form-control {
+  height: 56px;
+  border-radius: 1rem;
+  border: 1px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  /* overflow: hidden; */
+  justify-content: center;
+  margin-top: 2rem;
+  position: relative;
+}
+.form-control input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  padding: 0 2rem;
+  font-weight: 600;
+  font-family: var(--iranSansX-font);
+  direction: ltr;
+  letter-spacing: 2px;
+  padding-left: 80px;
+  border-radius: inherit;
+}
+.form-control input::placeholder {
+  font-weight: 300;
+  direction: rtl;
+  text-align: right;
+  letter-spacing: normal;
+}
+.form-control label {
+  height: 100%;
+  width: 66px;
+  background-color: #f7f7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  position: absolute;
+  left: 0;
+  border-radius: 1rem 0 0 1rem;
+  transition: all 200ms ease-in-out;
+}
+.form-control label.floating-label {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+  z-index: 2;
+  font-size: 1.3rem;
+  display: block;
+  text-wrap: nowrap;
+  width: fit-content;
+  height: fit-content;
+  margin-right: 1.5rem;
+  background: var(--white-clr);
+  color: var(--gray-clr);
+}
+.form-control input:is(:focus, :valid) + label.floating-label {
+  transform: translateY(-100%);
+}
+.check-field {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+.check-field > input {
+  width: 24px;
+  height: 24px;
+  accent-color: var(--primary-clr);
+  border: 5px;
+}
+.check-field > label a {
+  color: var(--blue-clr);
+}
+.btn-wrapper {
+  margin-top: 2rem;
+}
+.btn-wrapper button,
+.google-login-btn {
+  width: 100%;
+  height: 56px;
+  border-radius: 1rem;
+}
+.btn-wrapper button,
+.google-login-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: var(--iranSansX-font);
+  font-size: 1.7rem;
+  font-weight: 500;
+  background: var(--primary-clr-90);
+  color: var(--white-clr);
+}
+.btn-wrapper button:disabled {
+  background: #e9ecef;
+  color: var(--gray-clr);
+  border: none;
+  outline: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.btn-wrapper button:is(:hover) {
+  /* box-shadow: 0 0 0 0.2rem var(--primary-clr); */
+  background: var(--primary-clr);
+  color: var(--white-clr);
+  scale: 1;
+}
+.btn-wrapper button:is(:active),
+.google-login-btn:is(:active) {
+  background: var(--primary-clr);
+  color: var(--white-clr);
+  scale: 0.97;
+}
+.btn-wrapper button:is(:disabled),
+.google-login-btn:is(:disabled) {
+  background: #e9ecef;
+  color: var(--gray-clr);
+  border: none;
+  outline: none;
+  cursor: not-allowed;
+  color: var(--gray-clr);
+}
+
+.form-control.invalid {
+  border-color: var(--red-clr) !important;
+}
+
+.info {
+  /* color: var(--red-clr); */
+  color: var(--icon-clr);
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-top: 1rem;
+}
+.err {
+  color: var(--red-clr);
+}
+
+.login-form {
+  display: flex;
+  overflow: hidden !important;
+  position: relative;
+  height: 50rem;
+}
+.login-form > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 200ms ease-in-out;
+  padding: 2rem;
+  transform: translateX(100%);
+}
+.login-form > div.section-two {
+  transform: translateX(-100%);
+}
+.login-form > div.active {
+  transform: translateX(0%);
+  z-index: 10;
+}
+.section-one {
+}
+.section-two {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.section-two .description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+.section-two .description span {
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.section-two .description > button {
+  background-color: var(--white-clr);
+  color: var(--primary-clr);
+  font-size: 1.4rem;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+.line-or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  position: relative;
+  margin-top: 2rem;
+}
+.line-or::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--light-gray);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.line-or > span {
+  font-size: 1.5rem;
+  padding: 1rem;
+  position: relative;
+  z-index: 4;
+  background-color: var(--white-clr);
+}
+
+.google-login-btn {
+  background: var(--white-clr);
+  color: var(--gray-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border: 1px solid var(--primary-clr);
+  transition: all 100ms ease;
+}
+.google-login-btn:hover {
+  background: var(--primary-clr);
+  color: var(--white-clr);
+}
+
+/* otp */
+.otp-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.otp-input {
+  width: 75px;
+  height: 65px;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid var(--light-gray);
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: var(--iranSansX-font);
+  color: var(--primary-clr);
+}
+.otp-input:focus {
+  outline-color: var(--primary-clr);
+}
+.otp-input:valid{
+  border: 1px solid var(--primary-clr);
+}
+.timing {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  margin-top: 1.5rem;
+  font-family: var(--iranSansX-font);
+  background: none;
+  outline: none;
+  border: none;
+  gap: 3px;
+  font-weight: 400;
+  color: var(--gray-clr);
+}
+.timing .icon {
+  width: 26px;
+  height: 26px;
+  color: var(--gray-clr);
+}
+.timing .time {
+  color: var(--blue-clr);
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: block;
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+  0% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #000;
+  }
+  33% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #0002;
+  }
+  66% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #0002;
+  }
+  100% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #000;
+  }
+}

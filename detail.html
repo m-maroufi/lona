@@ -14,14 +14,12 @@
     <link rel="stylesheet" href="./assets/fonts/pinar/pinar-font-face.css" />
     <link rel="stylesheet" href="./assets/fonts/IranSansX/fontiran.css" />
     <!-- font -->
-    <!-- icon -->
-    <link rel="stylesheet" href="./assets/icons/css/all.min.css" />
-    <!-- style -->
     <!-- swiper -->
     <link rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
     <!-- swiper -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/detail.css" />
+    <script type="module" src="./assets/js/detailPage.js"></script>
     <title>فروشگاه | لونا</title>
   </head>
   <body>
@@ -49,7 +47,7 @@
               </svg>
             </a>
             <div class="horiz-line"></div>
-            <a href="#" class="btn user-icon">
+            <a href="login.html" class="btn user-icon">
               <svg height="24" width="24">
                 <use
                   href="./assets/icons/icons-pack.svg#lsicon--user-outline"
@@ -121,7 +119,7 @@
 
         <section class="detail-wrapper">
           <div class="img-gallery">
-            <div class="wrapper">
+            <div class="wrapper Skeleton">
               <div class="big-slider swiper" id="detail__gallery">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -185,7 +183,7 @@
               </button>
             </div>
 
-            <div class="zooming">
+            <div class="zooming Skeleton">
               <button class="zoom">
                 <svg
                   width="39"
@@ -199,7 +197,11 @@
                 <span>مشاهده تصویر بزرگتر</span>
               </button>
             </div>
-            <div thumbsSlider="" class="tumb-slider swiper" id="tumb_swiper">
+            <div
+              thumbsSlider=""
+              class="tumb-slider swiper Skeleton"
+              id="tumb_swiper"
+            >
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -220,13 +222,15 @@
             </div>
           </div>
           <div class="product-detail">
-            <div class="product-title">
+            <div class="product-title Skeleton">
               <h1>بـــــوت برند milaura</h1>
               <div class="line-title"></div>
             </div>
             <div class="main-detail">
-              <div class="pro-name">بوت ساق بلند چرم طبیعی برند milaura</div>
-              <div class="rate-code">
+              <div class="pro-name Skeleton">
+                بوت ساق بلند چرم طبیعی برند milaura
+              </div>
+              <div class="rate-code Skeleton">
                 <div class="code">
                   <span>کد </span>
                   <span>724323</span>
@@ -282,12 +286,12 @@
                   </div>
                 </div>
               </div>
-              <div class="pricing">
+              <div class="pricing Skeleton">
                 <span>64,655,000</span>
                 <span>تومان</span>
               </div>
 
-              <div class="inputs-radio color">
+              <div class="inputs-radio color Skeleton">
                 <div>
                   <input type="radio" name="color" id="color-1" checked />
                   <label
@@ -325,7 +329,7 @@
                   </label>
                 </div>
               </div>
-              <div class="sizes">
+              <div class="sizes Skeleton">
                 <span>سایز بندی </span>
                 <div class="inputs-radio">
                   <div>
@@ -346,7 +350,7 @@
                   </div>
                 </div>
               </div>
-              <div class="btns-action">
+              <div class="btns-action Skeleton">
                 <button class="btn-add-to-cart">افزودن به سبد خرید</button>
                 <div class="btns-cart">
                   <button class="btn-cart" id="addToCart">
@@ -375,7 +379,7 @@
                 </div>
               </div>
 
-              <div class="description">
+              <div class="description Skeleton">
                 <h5>توضیحات</h5>
                 <p>
                   تعویض کالا حداکثر تا 48 ساعت همراه با بسته بندی و شرایط اولیه
@@ -606,6 +610,14 @@
         return false;
       });
     </script>
-    <script type="module" src="./assets/js/script.js"></script>
+    <script>
+      window.addEventListener("load", (e) => {
+        const skeleton = document.querySelectorAll(".Skeleton");
+        skeleton.forEach((skeleton) => {
+          skeleton.classList.remove("Skeleton");
+        });
+      });
+    </script>
+    <!-- <script type="module" src="./assets/js/script.js"></script> -->
   </body>
 </html>
