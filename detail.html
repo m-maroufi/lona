@@ -38,8 +38,8 @@
           </form>
           <a href="." class="header-logo">LONA</a>
           <div class="top-links">
-            <a href="cart.html" class="cart-icon">
-              <span>0</span>
+            <a href="cart.html" class="cart-icon" >
+              <span id="cart__quntity">0</span>
               <svg height="24" width="24" style="color: gray">
                 <use
                   href="./assets/icons/icons-pack.svg#mi--shopping-cart"
@@ -276,9 +276,10 @@
                 </div>
               </div>
               <div class="btns-action Skeleton">
-                <button class="btn-add-to-cart">افزودن به سبد خرید</button>
+               
+                <button class="btn-add-to-cart" id="addToCart">افزودن به سبد خرید</button>
                 <div class="btns-cart">
-                  <button class="btn-cart" id="addToCart">
+                  <button class="btn-cart" id="plusToCart">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"

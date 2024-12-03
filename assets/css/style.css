@@ -178,13 +178,14 @@ main {
   width: 10px;
   position: absolute;
   top: -1rem;
-  right: -0.8rem;
+  right: -1.5rem;
   border-radius: 100%;
-  padding: 7px;
+  padding: 12px;
   background-color: var(--primary-clr);
   color: var(--white-clr);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: var(--iranSansX-font);
+  font-weight: 500;
 }
 .top-links .user-icon span {
   font-weight: 500;
