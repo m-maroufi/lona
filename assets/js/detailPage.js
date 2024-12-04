@@ -86,7 +86,7 @@ window.onload = function () {
     const imgElement = imgEl.querySelector("img");
     const overlayElement = imgEl.querySelector(".overlay");
 
-    imgElement.src = `/assets${src}`;
+    imgElement.src = `./assets${src}`;
     overlayElement.textContent = product.brand;
 
     big__Slider__wrapper.appendChild(imgEl.cloneNode(true)); // Append a clone for big slider
