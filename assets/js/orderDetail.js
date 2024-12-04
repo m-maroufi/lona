@@ -3,9 +3,12 @@ const cart__quntity = document.querySelector("#cart__quntity");
 const stepPagesEl = document.querySelector(".step-pages");
 const checkOutEl = document.querySelector(".check-out");
 const empty__list__address = document.querySelector("#empty__list__address");
-const addAddress = document.querySelectorAll("#addAddress");
+const addAddress = document.querySelectorAll(".add__Address");
 const order__item__wrapper = document.querySelector("#order__item__wrapper");
 const item__from__cart = document.querySelector("#item__from__cart").content;
+
+const createdFormWrapper = document.querySelector(".created-address");
+const cancelBtn = document.querySelector("#cancelBtn");
 
 const updateUI = () => {
   const basket = JSON.parse(localStorage.getItem("basket")) || [];
@@ -13,7 +16,9 @@ const updateUI = () => {
     const itemEl = item__from__cart.cloneNode(true);
     itemEl.querySelector(".item__name").textContent = item.name;
     itemEl.querySelector(".item__count").textContent = item.count;
-    itemEl.querySelector(".item__price").textContent = formatePrice(item.price * item.count);
+    itemEl.querySelector(".item__price").textContent = formatePrice(
+      item.price * item.count
+    );
     order__item__wrapper.appendChild(itemEl);
   });
   const quantity = basket
@@ -42,5 +47,21 @@ function checkOutDatail() {
   document.querySelector("#total__pay").textContent = formatePrice(totalPay);
 }
 
+addAddress.forEach((btn) => {
+  btn.addEventListener("click", showForm);
+});
+function showForm() {
+  createdFormWrapper.classList.add("active");
+}
+cancelBtn.addEventListener("click", (e) => resetForm(e));
+
+// document.addEventListener("click", (e) => resetForm(e));
+
+function resetForm(e) {
+  const wrapperEl = createdFormWrapper.querySelector(".form-wrapper");
+    createdFormWrapper.querySelector("form").reset();
+    createdFormWrapper.classList.remove("active");
+  
+}
 // updateUI for first render
 updateUI();

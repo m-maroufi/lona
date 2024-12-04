@@ -176,16 +176,134 @@
                   </button>
                 </div>
                 <div class="address-list">
-                  <div class="empty-list" id="empty__list__address">
+                  <!-- <div class="empty-list" id="empty__list__address">
                     <p>شما در حال حاضر هیچ آدرسی ثبت نکرده‌اید!</p>
-                    <button class="add__Address" id="addAddress">
-                      افزودن آدرس
-                    </button>
+                    <button class="add__Address">افزودن آدرس</button>
+                  </div> -->
+                  <div class="address">
+                    <input
+                      type="radio"
+                      value="address-1"
+                      name="order__address"
+                      id="order__address_1"
+                    />
+                    <label for="order__address_1">
+                      <div class="text">
+                        <p>
+                          <svg class="icon">
+                            <use
+                              href="./assets/icons/icons-pack.svg#mynaui--location"
+                            />
+                          </svg>
+                          <span
+                            >تهران، نیاوران، تنگستان چهارم، مجتمع حیات سبز، طبقه
+                            چهارم، واحد ۱۳۲</span
+                          >
+                        </p>
+                        <p>
+                          <svg class="icon">
+                            <use
+                              href="./assets/icons/icons-pack.svg#lsicon--user-outline"
+                            />
+                          </svg>
+                          <span>آرزو محمد علی زاده</span>
+                          <span class="dot"></span>
+                          <svg class="icon">
+                            <use
+                              href="./assets/icons/icons-pack.svg#carbon--phone"
+                            />
+                          </svg>
+                          <span dir="ltr">+98323122234</span>
+                        </p>
+                      </div>
+                      <div class="act-btns">
+                        <button>
+                          <svg
+                            class="icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use href="./assets/icons/icons-pack.svg#trash" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            class="icon"
+                          >
+                            <use
+                              href="./assets/icons/icons-pack.svg#mynaui--edit"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="address">
+                    <input
+                      type="radio"
+                      value="address-2"
+                      name="order__address"
+                      id="order__address_2"
+                    />
+                    <label for="order__address_2">
+                      <div class="text">
+                        <p>
+                          <svg class="icon">
+                            <use
+                              href="./assets/icons/icons-pack.svg#mynaui--location"
+                            />
+                          </svg>
+                          <span
+                            >تهران، نیاوران، تنگستان چهارم، مجتمع حیات سبز، طبقه
+                            چهارم، واحد ۱۳۲</span
+                          >
+                        </p>
+                        <p>
+                          <svg class="icon">
+                            <use
+                              href="./assets/icons/icons-pack.svg#lsicon--user-outline"
+                            />
+                          </svg>
+                          <span>آرزو محمد علی زاده</span>
+                          <span class="dot"></span>
+                          <svg class="icon">
+                            <use
+                              href="./assets/icons/icons-pack.svg#carbon--phone"
+                            />
+                          </svg>
+                          <span dir="ltr">+98323122234</span>
+                        </p>
+                      </div>
+                      <div class="act-btns">
+                        <button>
+                          <svg
+                            class="icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use href="./assets/icons/icons-pack.svg#trash" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            class="icon"
+                          >
+                            <use
+                              href="./assets/icons/icons-pack.svg#mynaui--edit"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </label>
                   </div>
                 </div>
-                <!-- <ul class="address-list">
-                  <li></li>
-                </ul> -->
+                
               </div>
 
               <div class="order-descript">
@@ -462,6 +580,77 @@
       </div>
     </footer>
     <!-- scripts -->
+
+    <div class="created-address">
+      <div class="form-wrapper">
+        <div class="form-title">
+          <h2>افزودن آدرس</h2>
+          <p>
+            لطفا در وارد کردن اطلاعات دقت فرمائید <span>لونا</span> مسئولیتی در
+            قبال ادرس اشتباه ندارد .
+          </p>
+        </div>
+        <form action="" class="">
+          <div class="form-control">
+            <label for="fullName">نام و نام خانوادگی:</label>
+            <input type="text" id="fullName" name="fullName" />
+            <span class="error"></span>
+          </div>
+          <div class="form-control">
+            <label for="phone"> شماره تلفن:</label>
+            <input type="text" id="phone" name="phone" />
+            <span class="error"></span>
+          </div>
+          <div class="form-control">
+            <label for="province"> استان</label>
+            <select name="province" id="province">
+              <option value="">-- انتخاب کنید --</option>
+              <option value="کرج">کرج</option>
+              <option value="کرمان">کرمان</option>
+              <option value="کرمانشاه">کرمانشاه</option>
+            </select>
+            <span class="error"></span>
+          </div>
+          <div class="form-control">
+            <label for="county"> شهرستان</label>
+            <select name="county" id="county">
+              <option value="">-- انتخاب کنید --</option>
+              <option value="کرج">کرج</option>
+              <option value="کرمان">کرمان</option>
+              <option value="کرمانشاه">کرمانشاه</option>
+            </select>
+            <span class="error"></span>
+          </div>
+          <div class="form-control full-w">
+            <label for="fullAddress"> ادرس کامل</label>
+            <input
+              type="text"
+              id="fullAddress"
+              name="fullAddress"
+              placeholder="  شامل خیابان ، کوچه ، پلاک ..."
+            />
+            <span class="error"></span>
+          </div>
+          <div class="form-control">
+            <label for="postalCode">کد پستی</label>
+            <input
+              type="text"
+              id="postalCode"
+              name="postalCode"
+              placeholder="کدپستی بدون خط تیره وارد شود"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="form-control full-h">
+            <div class="btns">
+              <button type="button" class="btn" id="addBtn">افزودن</button>
+              <button type="button" class="btn" id="cancelBtn">انصراف</button>
+            </div>
+            <span class="error"></span>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/swiper.js"></script>

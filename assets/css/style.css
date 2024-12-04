@@ -92,7 +92,7 @@ main {
   top: 0;
   left: 0;
   background: var(--white-clr);
-  z-index: 10000;
+  z-index: 900;
   max-height: 14rem;
 }
 .header .top {
