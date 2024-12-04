@@ -38,7 +38,7 @@
           <a href="." class="header-logo">LONA</a>
           <div class="top-links">
             <a href="cart.html" class="cart-icon">
-              <span>0</span>
+              <span id="cart__quntity">0</span>
               <svg height="24" width="24" style="color: gray">
                 <use
                   href="./assets/icons/icons-pack.svg#mi--shopping-cart"
@@ -140,6 +140,12 @@
           </div>
         </div>
         <div class="cart-wrapper">
+          <div id="emptyCart">
+            <img src="./assets/images/Pasted image.png" alt="" />
+            <h1>سبد خرید شما خالی است</h1>
+            <p>برای خرید لطفا به صفحه اصلی مراجعه کنید</p>
+            <a href="." class="btn">بازگشت به صفحه اصلی</a>
+          </div>
           <div class="step-pages">
             <div class="step-page card active">
               <div class="head">
@@ -148,188 +154,76 @@
                 <span>تعداد</span>
                 <span>جمع کل</span>
               </div>
-              <ul class="cart-list">
-                <li class="cart-item">
-                  <div class="info">
-                    <img src="./assets/images/products/10.jpg" alt="" />
-                    <div class="all-info">
-                      <div class="name">کتونی سولنا مدل WHAB</div>
-                      <div class="size">سایر : 39</div>
-                      <div class="color">
-                        <span>رنگ :</span>
-                        <span class="color-box"></span>
+              <ul class="cart-list" id="cart__list__wrapper">
+                <template id="cart__item">
+                  <li class="cart-item" data-id="1">
+                    <div class="info">
+                      <img src="./assets/images/products/10.jpg" alt="" />
+                      <div class="all-info">
+                        <div class="name">کتونی سولنا مدل WHAB</div>
+                        <div class="size">
+                          <span>سایز :</span>
+                          <span class="size-number"> 32 </span>
+                        </div>
+                        <div class="color">
+                          <span>رنگ :</span>
+                          <span class="color-box"></span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="price">
-                    <span> 1200,000 </span>
-                    <span>تومان</span>
-                  </div>
-                  <div class="quntity">
-                    <div>
-                      <button class="trash">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 16 16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <use href="./assets/icons/icons-pack.svg#trash" />
-                        </svg>
-                      </button>
-                      <!-- <button class="minus">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          width="18"
-                          height="18"
-                        >
-                          <use
-                            href="./assets/icons/icons-pack.svg#material-symbols--remove"
-                          />
-                        </svg>
-                      </button> -->
-                      <input type="text" value="1" disabled />
-                      <button class="plus">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          width="18"
-                          height="18"
-                        >
-                          <use
-                            href="./assets/icons/icons-pack.svg#mdi--add-bold"
-                          />
-                        </svg>
-                      </button>
+                    <div class="price">
+                      <span class="price-number"> 1200,000 </span>
+                      <span>تومان</span>
                     </div>
-                  </div>
-                  <div class="price total">
-                    <span> 1200,000 </span>
-                    <span>تومان</span>
-                  </div>
-                </li>
-                <li class="cart-item">
-                  <div class="info">
-                    <img src="./assets/images/products/10.jpg" alt="" />
-                    <div class="all-info">
-                      <div class="name">کتونی سولنا مدل WHAB</div>
-                      <div class="size">سایر : 39</div>
-                      <div class="color">
-                        <span>رنگ :</span>
-                        <span class="color-box"></span>
+                    <div class="quntity">
+                      <div>
+                        <button
+                          class="trash"
+                          id="removeFromCart"
+                          style="display: none"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 16 16"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use href="./assets/icons/icons-pack.svg#trash" />
+                          </svg>
+                        </button>
+                        <button class="minus" id="decrease">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                          >
+                            <use
+                              href="./assets/icons/icons-pack.svg#material-symbols--remove"
+                            />
+                          </svg>
+                        </button>
+                        <input type="text" value="1" disabled id="count" />
+                        <button class="plus" id="increase">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                          >
+                            <use
+                              href="./assets/icons/icons-pack.svg#mdi--add-bold"
+                            />
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div class="price">
-                    <span> 1200,000 </span>
-                    <span>تومان</span>
-                  </div>
-                  <div class="quntity">
-                    <div>
-                      <!-- <button class="trash">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 16 16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <use href="./assets/icons/icons-pack.svg#trash" />
-                        </svg>
-                      </button> -->
-                      <button class="minus">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          width="18"
-                          height="18"
-                        >
-                          <use
-                            href="./assets/icons/icons-pack.svg#material-symbols--remove"
-                          />
-                        </svg>
-                      </button>
-                      <input type="text" value="1" disabled />
-                      <button class="plus">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          width="18"
-                          height="18"
-                        >
-                          <use
-                            href="./assets/icons/icons-pack.svg#mdi--add-bold"
-                          />
-                        </svg>
-                      </button>
+                    <div class="price total">
+                      <span class="total-price"> 1200,000 </span>
+                      <span>تومان</span>
                     </div>
-                  </div>
-                  <div class="price total">
-                    <span> 1200,000 </span>
-                    <span>تومان</span>
-                  </div>
-                </li>
-
-                <li class="cart-item">
-                  <div class="info">
-                    <img src="./assets/images/products/10.jpg" alt="" />
-                    <div class="all-info">
-                      <div class="name">کتونی سولنا مدل WHAB</div>
-                      <div class="size">سایر : 39</div>
-                      <div class="color">
-                        <span>رنگ :</span>
-                        <span class="color-box"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="price">
-                    <span> 1200,000 </span>
-                    <span>تومان</span>
-                  </div>
-                  <div class="quntity">
-                    <div>
-                      <!-- <button class="trash">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 16 16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <use href="./assets/icons/icons-pack.svg#trash" />
-                        </svg>
-                      </button> -->
-                      <button class="minus">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          width="18"
-                          height="18"
-                        >
-                          <use
-                            href="./assets/icons/icons-pack.svg#material-symbols--remove"
-                          />
-                        </svg>
-                      </button>
-                      <input type="text" value="1" disabled />
-                      <button class="plus">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          width="18"
-                          height="18"
-                        >
-                          <use
-                            href="./assets/icons/icons-pack.svg#mdi--add-bold"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="price total">
-                    <span> 1200,000 </span>
-                    <span>تومان</span>
-                  </div>
-                </li>
+                  </li>
+                </template>
               </ul>
             </div>
           </div>
@@ -337,7 +231,7 @@
           <aside class="check-out">
             <div class="aside-header">
               <h2>سبد خرید</h2>
-              <button class="delete-all-btn">
+              <button class="delete-all-btn" id="removeAll">
                 <svg
                   width="24"
                   height="24"
@@ -354,13 +248,13 @@
 
               <div>
                 <span>تعداد</span>
-                <span>4</span>
+                <span id="total__item">4</span>
               </div>
 
               <div>
                 <span>قیمت کالاها</span>
                 <div>
-                  <span>23,000,000</span>
+                  <span id="total__price">23,000,000</span>
                   <span>تومان</span>
                 </div>
               </div>
@@ -368,7 +262,7 @@
               <div>
                 <span> هزینه ارسال</span>
                 <div>
-                  <span>0</span>
+                  <span id="delivery__cost">0</span>
                   <span>تومان</span>
                 </div>
               </div>
@@ -390,7 +284,7 @@
               <div>
                 <span> مبلغ قابل پرداخت</span>
                 <div>
-                  <span>20,308,000</span>
+                  <span id="total__pay">20,308,000</span>
                   <span>تومان</span>
                 </div>
               </div>
@@ -586,6 +480,7 @@
 
     <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/swiper.js"></script>
-    <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/cart.js"></script>
+    <!-- <script type="module" src="./assets/js/script.js"></script> -->
   </body>
 </html>

@@ -93,7 +93,6 @@ window.onload = function () {
     tumb__slide__wrapper.appendChild(imgEl); // Append the original for thumbnails
   });
 
- 
   // add to baskets
   function getCheckedValue(name) {
     const radios = document.getElementsByName(name);
@@ -114,11 +113,12 @@ window.onload = function () {
     basket.push({
       id: product.id,
       name: product.productName,
-      price: product.price,
+      price: +product.price,
       productCode: product.productCode,
       color: getCheckedValue("color"),
       size: getCheckedValue("size"),
       count: +count.value,
+      cover: product.cover,
     });
     console.log(basket);
     updateCart();
@@ -139,20 +139,20 @@ window.onload = function () {
     }
   };
   updateCart();
-  
 
   // حذف لودینگ اسکلتی از صفحه
-   const skeleton = document.querySelectorAll(".Skeleton");
-   skeleton.forEach((skeleton) => {
-     skeleton.classList.remove("Skeleton");
-   });
-
+  const skeleton = document.querySelectorAll(".Skeleton");
+  skeleton.forEach((skeleton) => {
+    skeleton.classList.remove("Skeleton");
+  });
 };
 
 plusToCart.addEventListener("click", (e) => {
   e.preventDefault();
   const countValue = parseInt(count.value) + 1;
-  count.value = countValue;
+  if (count.value < 10) {
+    count.value = countValue;
+  }
 });
 muinsToCart.addEventListener("click", (e) => {
   e.preventDefault();
