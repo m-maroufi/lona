@@ -40,7 +40,7 @@
           <a href="." class="header-logo">LONA</a>
           <div class="top-links">
             <a href="cart.html" class="cart-icon">
-              <span>0</span>
+              <span id="cart__quntity">0</span>
               <svg height="24" width="24" style="color: gray">
                 <use
                   href="./assets/icons/icons-pack.svg#mi--shopping-cart"
@@ -167,7 +167,7 @@
                 <div class="list-wrapper">
                   <div class="bank-list">
                     <div>
-                      <input type="radio" id="iyand" name="bank" checked />
+                      <input type="radio" id="iyand" name="bank" value="iyand" checked />
                       <label for="iyand">
                         <img
                           src="./assets/images/banks/Pasted image (2).png"
@@ -176,7 +176,7 @@
                       </label>
                     </div>
                     <div>
-                      <input type="radio" id="mellat" name="bank" />
+                      <input type="radio" id="mellat" name="bank" value="mellat"/>
                       <label for="mellat">
                         <img
                           src="./assets/images/banks/bank-mellat.png"
@@ -185,7 +185,7 @@
                       </label>
                     </div>
                     <div>
-                      <input type="radio" id="tourism" name="bank" />
+                      <input type="radio" id="tourism" name="bank" value="tourism"/>
                       <label for="tourism">
                         <img
                           src="./assets/images/banks/Gardeshgari bank logo Vector.png"
@@ -194,7 +194,7 @@
                       </label>
                     </div>
                     <div>
-                      <input type="radio" id="saman" name="bank" />
+                      <input type="radio" id="saman" name="bank" value="saman"/>
                       <label for="saman">
                         <img
                           src="./assets/images/banks/Saman bank logo Vector.png"
@@ -227,55 +227,33 @@
                 </svg>
               </button>
             </div>
-            <div class="list-order-item">
-              <div>
-                <div>بوت MILAURA</div>
+           <div class="list-order-item" id="order__item__wrapper">
+              <template id="item__from__cart">
                 <div>
-                  <span>2</span>
-                  <span>عدد</span>
+                  <div class="item__name">بوت MILAURA</div>
+                  <div>
+                    <span class="item__count">2</span>
+                    <span>عدد</span>
+                  </div>
+                  <div>
+                    <span class="item__price">1,000,000</span>
+                    <span>تومان</span>
+                  </div>
                 </div>
-                <div>
-                  <span>1,000,000</span>
-                  <span>تومان</span>
-                </div>
-              </div>
-
-              <div>
-                <div>بوت MILAURA</div>
-                <div>
-                  <span>2</span>
-                  <span>عدد</span>
-                </div>
-                <div>
-                  <span>1,000,000</span>
-                  <span>تومان</span>
-                </div>
-              </div>
-
-              <div>
-                <div>بوت MILAURA</div>
-                <div>
-                  <span>2</span>
-                  <span>عدد</span>
-                </div>
-                <div>
-                  <span>1,000,000</span>
-                  <span>تومان</span>
-                </div>
-              </div>
+              </template>
             </div>
             <div class="pay-details">
               <h3>جزئیات پرداخت</h3>
 
               <div>
                 <span>تعداد</span>
-                <span>4</span>
+                <span id="total__item">4</span>
               </div>
 
               <div>
                 <span>قیمت کالاها</span>
                 <div>
-                  <span>23,000,000</span>
+                  <span id="total__price">23,000,000</span>
                   <span>تومان</span>
                 </div>
               </div>
@@ -305,7 +283,7 @@
               <div>
                 <span> مبلغ قابل پرداخت</span>
                 <div>
-                  <span>20,308,000</span>
+                  <span id="total__pay">20,308,000</span>
                   <span>تومان</span>
                 </div>
               </div>
@@ -315,7 +293,7 @@
               بعدی را تکمیل کنید.
             </div>
             <div class="payment-btn">
-              <a href="payment-status.html">پرداخت</a>
+              <a href="payment-status.html" id="pay">پرداخت</a>
             </div>
           </aside>
         </div>
@@ -501,6 +479,7 @@
 
     <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/swiper.js"></script>
-    <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/payment.js"></script>
+    <!-- <script type="module" src="./assets/js/script.js"></script> -->
   </body>
 </html>

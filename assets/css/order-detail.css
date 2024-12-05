@@ -322,3 +322,26 @@
   border-color: var(--primary-clr);
   outline: 1px solid var(--primary-clr);
 }
+#addBtn:disabled{
+  pointer-events: none;
+  opacity: .5;
+}
+.payment-btn button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--primary-clr);
+  color: var(--white-clr);
+  border-radius: 8px;
+  font-family: var(--iranSansX-font);
+  font-weight: 500;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+}
+.payment-btn button:active{
+  transform: scale(0.95);
+}

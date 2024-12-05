@@ -584,6 +584,7 @@ main {
   height: 100%;
   font-family: var(--iranSansX-font);
   font-weight: 400;
+  align-self: center;
 }
 .cm-slide .rate {
   position: absolute;
@@ -791,6 +792,10 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.cm-date {
+  font-size: 13px;
+  text-wrap: nowrap;
 }
 /* responsive breakpoints */
 
