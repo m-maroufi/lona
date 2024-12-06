@@ -24,14 +24,6 @@ const addressList = JSON.parse(localStorage.getItem("addressList")) || [];
 const updateUI = () => {
   const basket = JSON.parse(localStorage.getItem("basket")) || [];
   const addressList = JSON.parse(localStorage.getItem("addressList")) || [];
-  // const addressUser = {
-  //   userName: fullName.value,
-  //   userPhone: phone.value,
-  //   userProvince: getProviceWithId(provice.value),
-  //   userCity: getcityWithId(city.value),
-  //   userAddress: address.value,
-  //   userPostalCode: postalCode.value,
-  // };
   addressListWrapper.innerHTML = "";
   order__item__wrapper.innerHTML = "";
   if (addressList.length > 0) {
@@ -153,11 +145,12 @@ function addCountries() {
 }
 function getProviceWithId(id) {
   const prov = provice.find((item) => item.provinceId == id);
-  console.log(prov);
   return prov.provinceName;
 }
-function getcityWithId(id) {
-  const city = ctitesData.find((item) => item.cityId == id);
+function getcityWithId(cId, provId) {
+  const city = ctitesData.find(
+    (item) => item.cityId == cId && item.provinceId == provId
+  );
   console.log(city);
   return city.cityName;
 }
@@ -263,7 +256,7 @@ function validationForm() {
       userName: fullName.value,
       userPhone: phone.value,
       userProvince: getProviceWithId(provice.value),
-      userCity: getcityWithId(city.value),
+      userCity: getcityWithId(city.value, provice.value),
       userAddress: address.value,
       userPostalCode: postalCode.value,
     };
