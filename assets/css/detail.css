@@ -229,6 +229,7 @@ main#main-detail {
   border-radius: 50%;
   transform: scale(0.8);
   transition: 0.1s ease-in-out;
+  border: 1px solid var(--light-gray);
 }
 .inputs-radio div input:checked + label {
   transform: scale(0.9);

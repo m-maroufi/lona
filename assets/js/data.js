@@ -14,7 +14,7 @@ const data = [
     brand: "LADYMOOD",
     colors: [
       { id: 1, code: "#eab670", name: "کرم" },
-      { id: 2, code: "#FFF", name: "سفید" },
+      { id: 2, code: "#c1bdb3", name: "سفید" },
       { id: 3, code: "#0f0f0f", name: "سیاه" },
     ],
     images: [
@@ -45,7 +45,12 @@ const data = [
     category: "بوت",
     catId: 3,
     brand: "ANJELA",
-    colors: [{ id: 1, code: "#0f0f0f", name: "سیاه" }],
+    colors: [
+      { id: 1, code: "#0f0f0f", name: "سیاه" },
+      { id: 2, code: "#ffb4a2", name: "صورتی" },
+      { id: 3, code: "#283618", name: "سبز" },
+      { id: 4, code: "#3d405b", name: "بنفش" },
+    ],
     images: [
       { id: 1, src: "/images/boot/2/1.jpeg" },
       { id: 2, src: "/images/boot/2/2.jpeg" },
@@ -76,7 +81,10 @@ const data = [
     brand: "ANJELA",
     colors: [
       { id: 1, code: "#0f0f0f", name: "سیاه" },
-      { id: 2, code: "#032111", name: "جگری" },
+      { id: 2, code: "#780000", name: "جگری" },
+      { id: 3, code: "#f8f9fa", name: "سفید کرم" },
+      { id: 4, code: "#432818", name: "قهوه ای" },
+      { id: 5, code: "#9d8189", name: "جگری" },
     ],
     images: [
       { id: 1, src: "/images/boot/3/1.jpeg" },
@@ -108,8 +116,10 @@ const data = [
     catId: 2,
     brand: "VIONA",
     colors: [
-      { id: 1, code: "#0f0f0f", name: "سیاه" },
-      { id: 2, code: "#032111", name: "جگری" },
+      { id: 1, code: "#81b29a", name: "سیاه" },
+      { id: 2, code: "#f5cb5c", name: "زرد" },
+      { id: 3, code: "#16697a", name: "یشمی" },
+      { id: 4, code: "#f25f5c", name: "قرمز" },
     ],
     images: [
       { id: 1, src: "/images/kife/1/1.jpeg" },
@@ -131,8 +141,10 @@ const data = [
     catId: 2,
     brand: "VIONA",
     colors: [
-      { id: 1, code: "#0f0f0f", name: "سیاه" },
-      { id: 2, code: "#032111", name: "جگری" },
+      { id: 1, code: "#ef8354", name: "سیاه" },
+      { id: 2, code: "#797d62", name: "جلبکی" },
+      { id: 3, code: "#d9ae94", name: "قهوه ای" },
+      { id: 4, code: "#565264", name: "بنفش روشن" },
     ],
     images: [
       { id: 1, src: "/images/kife/2/1.jpg" },
@@ -157,7 +169,12 @@ const data = [
     category: "کتونی",
     catId: 1,
     brand: "KABIN",
-    colors: [{ id: 1, code: "#0f0f0f", name: "سیاه" }],
+    colors: [
+      { id: 1, code: "#1282a2", name: "ابی" },
+      { id: 2, code: "#50514f", name: "سوخته" },
+      { id: 3, code: "#ce796b", name: "جگری" },
+      { id: 4, code: "#565264", name: "بنفش روشن" },
+    ],
     images: [
       { id: 1, src: "/images/katooni/1/1.jpg" },
       { id: 2, src: "/images/katooni/1/2.jpg" },
@@ -186,7 +203,11 @@ const data = [
     category: "کتونی",
     catId: 1,
     brand: "KANDAL",
-    colors: [{ id: 1, code: "#0f0f0f", name: "سیاه" }],
+    colors: [
+      { id: 1, code: "#5c4742", name: "ابی" },
+      { id: 2, code: "#424b54", name: "سوخته" },
+      { id: 3, code: "#0d1f2d", name: "بنفش روشن" },
+    ],
     images: [
       { id: 1, src: "/images/katooni/2/1.jpeg" },
       { id: 2, src: "/images/katooni/2/2.jpeg" },
@@ -216,7 +237,12 @@ const data = [
     category: "پاشنه بلند",
     catId: 4,
     brand: "KANDAL",
-    colors: [{ id: 1, code: "#0f0f0f", name: "سیاه" }],
+    colors: [
+      { id: 1, code: "#2c1a1d", name: "قهوه ای" },
+      { id: 2, code: "#424b54", name: "سوخته" },
+      { id: 3, code: "#0d1f2d", name: "سبز سوخته" },
+      { id: 4, code: "#434a42", name: "بنفش روشن" },
+    ],
     images: [
       { id: 1, src: "/images/pashne/1/1.jpeg" },
       { id: 2, src: "/images/pashne/1/2.jpeg" },
