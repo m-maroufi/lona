@@ -322,7 +322,7 @@ goPayment.addEventListener("click", (e) => {
   localStorage.removeItem("checkoutPayment");
   localStorage.setItem("checkoutPayment", JSON.stringify(checkoutPayment));
   console.log(window.location.origin);
-  window.location.href = window.location.origin + "/payment.html";
+  window.location.href = "payment.html";
 });
 
 // updateUI for first render
