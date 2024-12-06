@@ -4,6 +4,11 @@ const order__item__wrapper = document.querySelector("#order__item__wrapper");
 const item__from__cart = document.querySelector("#item__from__cart").content;
 const paybtn = document.querySelector("#pay");
 
+const checkoutPayment = JSON.parse(localStorage.getItem("checkoutPayment"));
+if (!checkoutPayment) {
+  window.location.href = "index.html";
+}
+
 function updateUI() {
   const basket = JSON.parse(localStorage.getItem("basket")) || [];
   order__item__wrapper.innerHTML = "";
@@ -68,7 +73,6 @@ paybtn.addEventListener("click", (e) => {
   checkoutPayment.payByBank = getuserSlecectedBank();
   const date = new Date();
   console.log(date);
-  //   localStorage.setItem("checkoutPayment", JSON.stringify(checkoutPayment));
   localStorage.setItem(
     "order",
     JSON.stringify({

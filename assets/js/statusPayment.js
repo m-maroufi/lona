@@ -2,10 +2,15 @@ const wrapperStatus = document.querySelector(".status-wrapper");
 
 window.onload = () => {
   const order = JSON.parse(localStorage.getItem("order"));
+  if (!order) {
+    window.location.href = "index.html";
+  }
   if (order.status == "success") {
-    console.log(order);
     localStorage.removeItem("checkoutPayment");
-    localStorage.clear("cart");
+    localStorage.removeItem("basket");
+    // localStorage.clear("cart");
+    console.log(localStorage.getItem("addressList"));
+    
     wrapperStatus.innerHTML = ` <div class="status success">
             <div>
               <svg
@@ -26,8 +31,7 @@ window.onload = () => {
             <a href="index.html" class="back">بازگــشت به خـــانه</a>
           </div>`;
     // localStorage.removeItem("cart");
-  }
-  else {
+  } else {
     wrapperStatus.innerHTML = ` <div class="status fail">
             <div>
               <svg

@@ -66,10 +66,10 @@
 .form-title .icon {
   width: 2.5rem;
   height: 2.5rem;
-  color: #85858B;
+  color: #85858b;
   transition: all 150ms linear;
 }
-.go-back:hover .icon{
+.go-back:hover .icon {
   color: var(--primary-clr);
   transform: translateX(1rem);
 }
@@ -347,7 +347,7 @@
 .otp-input:focus {
   outline-color: var(--primary-clr);
 }
-.otp-input:valid{
+.otp-input:valid {
   border: 1px solid var(--primary-clr);
 }
 .timing {
@@ -373,29 +373,35 @@
 .timing .time {
   color: var(--blue-clr);
 }
-/* HTML: <div class="loader"></div> */
-.loader {
-  display: block;
-  width: 15px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  animation: l5 1s infinite linear alternate;
+.cod-btn {
+  display: flex;
+  align-items: center;
 }
-@keyframes l5 {
-  0% {
-    box-shadow: 20px 0 #000, -20px 0 #0002;
-    background: #000;
-  }
-  33% {
-    box-shadow: 20px 0 #000, -20px 0 #0002;
-    background: #0002;
-  }
-  66% {
-    box-shadow: 20px 0 #0002, -20px 0 #000;
-    background: #0002;
-  }
-  100% {
-    box-shadow: 20px 0 #0002, -20px 0 #000;
-    background: #000;
-  }
+#send__new__code {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  margin-top: 1.5rem;
+  font-family: var(--iranSansX-font);
+  background: none;
+  outline: none;
+  border: none;
+  gap: 3px;
+  font-weight: 400;
+  border: 1px solid var(--white-clr);
+  color: var(--white-clr);
+  background: var(--blue-clr);
+  padding: .6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#send__new__code:active {
+  transform: scale(0.95);
+}
+#otp__err {
+  margin-top: 1rem;
+  padding-right: 1rem;
+  
 }
