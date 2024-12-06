@@ -20,9 +20,15 @@ const otpErrEl = document.querySelector("#otp__err");
 const sendNewCode = document.getElementById("send__new__code");
 const countdown = document.getElementById("count__down");
 const timing = document.querySelector(".timing");
-
+const cart__quntity = document.querySelector("#cart__quntity");
 const otpCodeServer = "123456";
-
+// تعداد محصولات سبد خرید
+const basket = JSON.parse(localStorage.getItem("basket")) || [];
+const quantity = basket
+  .map((item) => item.count)
+  .reduce((itemCount, counter) => itemCount + counter, 0);
+cart__quntity.textContent = quantity;
+// otp time
 let startSec = 120;
 let timeinterval;
 

@@ -1,0 +1,38 @@
+.cat-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cat-header h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--gray-clr);
+}
+.cat-header h1 span {
+  color: var(--primary-clr);
+  font-weight: 800;
+}
+.cat-header p {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  color: var(--gray-clr);
+}
+.noProduct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    border: 1px solid var(--light-gray);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: var(--gray-clr);
+    font-family: var(--iranSansX-font);
+
+}
+.noProduct img{
+    opacity: .6;
+}

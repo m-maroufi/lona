@@ -1,4 +1,5 @@
 import data from "./data.js";
+import { category } from "./categoryData.js";
 import { comments } from "./comentsData.js";
 import { formatePrice } from "./helper.js";
 //
@@ -61,4 +62,19 @@ comments.forEach((cm) => {
   cm__box.querySelector(".cm-body").textContent = cm.text;
   cm__box.querySelector(".cm-rate-number").textContent = cm.rate;
   comentsWrapper.appendChild(cm__box);
+});
+
+// ایجاد دسته بندی ها در صفحه اصلی
+const categoryWrapper = document.querySelector("#categories__wrapper");
+const categoryTemplate = document.querySelector("#category__template").content;
+
+category.forEach((cat, index) => {
+  const cat__box = categoryTemplate.cloneNode(true);
+  cat__box.querySelector("#cat__name").textContent = cat.name;
+  cat__box.querySelector(".cat__img").src = `./assets${cat.image}`;
+  cat__box
+    .querySelector(".cat-item")
+    .setAttribute("href", `category.html?id=${cat.id}`);
+  console.log(cat__box);
+  categoryWrapper.appendChild(cat__box);
 });
