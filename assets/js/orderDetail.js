@@ -1,4 +1,4 @@
-import { formatePrice } from "./helper.js";
+import { convertToEnglish, formatePrice } from "./helper.js";
 import { ctitesData } from "./cities.js";
 import { provice } from "./provice.js";
 const cart__quntity = document.querySelector("#cart__quntity");
@@ -28,7 +28,6 @@ const updateUI = () => {
   order__item__wrapper.innerHTML = "";
   if (addressList.length > 0) {
     addressList.forEach((item, index) => {
-      console.log(item);
       const itemEl = addressTemplate.cloneNode(true);
       itemEl.querySelector("label").setAttribute("for", item.id);
       itemEl.querySelector("input").id = item.id;
@@ -108,6 +107,9 @@ function resetForm() {
   createdFormWrapper
     .querySelectorAll("input,select")
     .forEach((el) => (el.style.borderColor = "var(--light-gray)"));
+  createdFormWrapper
+    .querySelector("#countySelect")
+    .setAttribute("disabled", true);
 }
 
 // get provice and set select option
@@ -144,14 +146,20 @@ function addCountries() {
   // console.log(citiesOfprov);
 }
 function getProviceWithId(id) {
+  if (!id) {
+    return null;
+  }
   const prov = provice.find((item) => item.provinceId == id);
   return prov.provinceName;
 }
 function getcityWithId(cId, provId) {
+  if (!cId || !provId) {
+    return null;
+  }
   const city = ctitesData.find(
     (item) => item.cityId == cId && item.provinceId == provId
   );
-  console.log(city);
+
   return city.cityName;
 }
 // validetion forms
@@ -171,10 +179,9 @@ function checkSelectValue(selectBox) {
   }
 }
 function validatePostalCode(postalCode) {
-  // الگوی ریجکس برای کد پستی ایران
-  const pattern = /^\d{10}$/;
-  // بررسی تطابق کد پستی با الگو
-  return pattern.test(postalCode);
+  const englishPostalCode = convertToEnglish(postalCode);
+  const regex = /^[0-9]{10}$/; // کد پستی ایران باید 10 رقم باشد
+  return regex.test(englishPostalCode);
 }
 
 const addBtn = document.querySelector("#addBtn");
@@ -190,6 +197,16 @@ function unSetErr(el) {
   errEl.textContent = "";
   el.style.borderColor = "var(--light-gray)";
 }
+let err = [];
+let indexOfForRemove;
+function removeItemFromErrArr(item) {
+  indexOfForRemove = err.indexOf(item);
+  if (indexOfForRemove !== -1) {
+    err.splice(indexOfForRemove, 1);
+    return true;
+  }
+  return false;
+}
 function generateUniqueId() {
   return "id-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
 }
@@ -201,56 +218,58 @@ function validationForm() {
   const city = newAddressform.querySelector("#countySelect");
   const address = newAddressform.querySelector("#fullAddress");
   const postalCode = newAddressform.querySelector("#postalCode");
-  let err = false;
+  err = [];
   if (fullName.value.length < 3) {
     setErr(fullName, "نام و نام خانوادگی باید حداقل 3 کاراکتر باشد");
-    err = true;
+    err.push(fullName);
   } else {
     unSetErr(fullName);
-    err = false;
+    removeItemFromErrArr(fullName);
   }
 
   if (!validateIranianMobileNumber(phone.value)) {
     setErr(phone, "شماره تلفن با 09 شروع شود ");
-    err = true;
+    err.push(phone);
   } else {
     unSetErr(phone);
-    err == false;
+    removeItemFromErrArr(phone);
   }
 
   if (!checkSelectValue(provice)) {
     setErr(provice, "لطفا استان محل سکونت را انتخاب کنید");
-    err == true;
+    err.push(provice);
   } else {
     unSetErr(provice);
-    err = false;
+    removeItemFromErrArr(provice);
   }
 
   if (!checkSelectValue(city)) {
     setErr(city, "لطفا شهر محل سکونت را انتخاب کنید");
-    err = true;
+    err.push(city);
   } else {
     unSetErr(city);
-    err = false;
+    removeItemFromErrArr(city);
   }
 
   if (address.value.length < 5) {
     setErr(address, "لطفا آدرس را به صورت دقیق و حداقل 5 کاراکتر وارد کنید");
-    err = true;
+    err.push(address);
+    console.log(address);
   } else {
     unSetErr(address);
-    err = false;
+    removeItemFromErrArr(address);
   }
 
   if (!validatePostalCode(postalCode.value)) {
     setErr(postalCode, "کد پستی باید 10 رقم باشد");
-    err = true;
+    err.push(postalCode);
   } else {
     unSetErr(postalCode);
-    err = false;
+    removeItemFromErrArr(postalCode);
   }
+  console.log(err);
 
-  if (!err) {
+  if (err.length <= 0) {
     const addressUser = {
       id: generateUniqueId(),
       userName: fullName.value,
@@ -274,7 +293,6 @@ function createdAddressItem(newAddress) {
 }
 
 function removeAddress(id) {
-  console.log(id);
   const index = addressList.findIndex((item) => item.id === id);
   if (index !== -1) {
     addressList.splice(index, 1);
@@ -314,7 +332,6 @@ goPayment.addEventListener("click", (e) => {
   // console.log(checkoutPayment);
   localStorage.removeItem("checkoutPayment");
   localStorage.setItem("checkoutPayment", JSON.stringify(checkoutPayment));
-  console.log(window.location.origin);
   window.location.href = "payment.html";
 });
 
