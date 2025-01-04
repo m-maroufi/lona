@@ -38,7 +38,7 @@
           </form>
           <a href="." class="header-logo">LONA</a>
           <div class="top-links">
-            <a href="cart.html" class="cart-icon" >
+            <a href="cart.html" class="cart-icon">
               <span id="cart__quntity">0</span>
               <svg height="24" width="24" style="color: gray">
                 <use
@@ -160,7 +160,7 @@
             </div>
 
             <div class="zooming Skeleton">
-              <button class="zoom">
+              <button class="zoom" id="zoomingBtn">
                 <svg
                   width="39"
                   height="40"
@@ -276,8 +276,9 @@
                 </div>
               </div>
               <div class="btns-action Skeleton">
-               
-                <button class="btn-add-to-cart" id="addToCart">افزودن به سبد خرید</button>
+                <button class="btn-add-to-cart" id="addToCart">
+                  افزودن به سبد خرید
+                </button>
                 <div class="btns-cart">
                   <button class="btn-cart" id="plusToCart">
                     <svg
@@ -793,6 +794,58 @@
         </p>
       </div>
     </footer>
+
+    <!-- start overlay component and modal section -->
+    <div id="modalsliderContainer">
+      <button class="close-modal btn" id="closeModal">
+        <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use xlink:href="./assets/icons/icons-pack.svg#iconamoon--close-bold" />
+      </svg>
+      </button>
+      <div class="modal">
+        <div
+          class="modal-slider-wrapper swiper"
+          id="modal__big__slide__container"
+        >
+          <div class="swiper-wrapper"></div>
+        </div>
+        <div thumbsSlider="" class="swiper" id="modal__tumbnail__container">
+          <div class="modal-tumbnail-slider swiper-wrapper">
+            <div class="modal-tumbnail-item swiper-slide">
+              <img src="./assets/images/boot/1/1.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+        <button class="modal-slider-btn" id="modal-next-slide">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="./assets/icons/icons-pack.svg#arrow-right" />
+          </svg>
+        </button>
+        <button class="modal-slider-btn" id="modal-prev-slide">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="./assets/icons/icons-pack.svg#arrow-right" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- end  overlay component and modal section -->
+
     <!-- scripts -->
     <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/swiper.js"></script>

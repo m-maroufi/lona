@@ -14,11 +14,11 @@ const size__product = document.querySelector("#size__product").content;
 const img__slide__product =
   document.querySelector("#side__big__slider").content;
 const big__Slider__wrapper = document.querySelector("#big__Slider__wrapper");
-
 const tumb__slide__wrapper = document.querySelector("#tumb__slide__wrapper");
-// const tumb__slide = document.querySelector("#tumb__slide").content;
 const sizeWrapper = document.querySelector(".sizes > .inputs-radio");
-
+const zoomingBtn = document.querySelector("#zoomingBtn");
+const closeModal = document.querySelector("#closeModal");
+const modalsliderContainer = document.querySelector("#modalsliderContainer");
 // basket data ;
 const basket = localStorage.getItem("basket")
   ? JSON.parse(localStorage.getItem("basket"))
@@ -91,6 +91,14 @@ window.onload = function () {
 
     big__Slider__wrapper.appendChild(imgEl.cloneNode(true)); // Append a clone for big slider
     tumb__slide__wrapper.appendChild(imgEl); // Append the original for thumbnails
+  });
+  // فراخوانی ایجاد اسلاید در مودال برای بزرگنمایی تصویر
+  zoomingBtn.addEventListener("click", (e) => {
+    createdModalSlider(product.images);
+    modalsliderContainer.style.display = "flex";
+  });
+  closeModal.addEventListener("click", (e) => {
+    modalsliderContainer.style.display = "none";
   });
 
   // add to baskets
@@ -182,3 +190,38 @@ const tumbImg = new Swiper("#detail__gallery", {
     swiper: bigImg,
   },
 });
+
+// فانکشن برای بزرگ نمایی تصویر
+
+function createdModalSlider(images) {
+  const imgsElms = images.map((img, index) => {
+    return `  <div class="big-slide swiper-slide" data-id=${img.id}>
+              <img src="./assets${img.src}" alt="">
+            </div>`;
+  });
+  const modalBigSliderWrapper = document.querySelector(
+    "#modal__big__slide__container > div.swiper-wrapper"
+  );
+  const tumbnailSlideContainer = document.querySelector(
+    "#modal__tumbnail__container > div.swiper-wrapper"
+  );
+  modalBigSliderWrapper.innerHTML = imgsElms.join(""); // join() برای متصل کردن آرایه به یک رشته
+  tumbnailSlideContainer.innerHTML = imgsElms.join("");
+  const tumbImgsInModal = new Swiper("#modal__tumbnail__container", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    //
+  });
+  const bigSliderInModal = new Swiper("#modal__big__slide__container", {
+    spaceBetween: 5,
+    navigation: {
+      nextEl: "#modal-next-slide",
+      prevEl: "#modal-prev-slide",
+    },
+    thumbs: {
+      swiper: tumbImgsInModal,
+    },
+  });
+}
