@@ -11,7 +11,7 @@ const removeAllBtn = document.querySelector("#removeAll");
 
 
 const updateUI = () => {
-  console.log("runn...");
+
   cartListWrapper.innerHTML = "";
   // update cart quantity
   const basket = localStorage.getItem("basket")

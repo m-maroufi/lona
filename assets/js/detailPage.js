@@ -164,6 +164,7 @@ muinsToCart.addEventListener("click", (e) => {
   return false;
 });
 
+// swiper slider
 const bigImg = new Swiper("#tumb_swiper", {
   spaceBetween: 10,
   slidesPerView: 4,

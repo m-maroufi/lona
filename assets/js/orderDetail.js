@@ -93,6 +93,7 @@ function checkOutDatail() {
 addAddress.forEach((btn) => {
   btn.addEventListener("click", showForm);
 });
+
 function showForm() {
   createdFormWrapper.classList.add("active");
 }

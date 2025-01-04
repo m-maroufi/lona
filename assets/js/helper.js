@@ -8,7 +8,6 @@ export const sleep = (time) => {
     }, time);
   });
 };
-
 export function convertToEnglish(input) {
   const persianToEnglishMap = {
     "۰": "0",

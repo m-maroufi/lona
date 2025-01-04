@@ -1,9 +1,7 @@
 import { formatePrice, sleep } from "./helper.js";
-
 const sectionOne = document.querySelector(".section-one");
 const sectionTwo = document.querySelector(".section-two");
 const backForm = document.querySelector(".go-back");
-
 const inpPhone = document.querySelector("#phone");
 const inpAccepted = document.querySelector("#accepted");
 const formCrtlElIpu = document.querySelector('[data-role="phone"]');
@@ -148,7 +146,7 @@ btnSendCode.addEventListener("click", (e) => {
     btnSendCode.querySelector(".text-btn").style.display = "none";
     btnSendCode.querySelector(".loader").style.display = "inline-block";
     sleep(1000).then((res) => {
-      console.log(res);
+
       sectionOne.classList.remove("active");
       sectionTwo.classList.add("active");
       backForm.style.display = "block";
@@ -189,7 +187,6 @@ optInputs.forEach((input, index) => {
       currentInp.value = "";
       return;
     }
-
     if (
       nexInp &&
       nexInp.hasAttribute("disabled") &&
